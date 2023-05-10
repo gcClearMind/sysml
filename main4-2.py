@@ -97,6 +97,7 @@ def dfs_getAttribute(node, fatherNode=None):
 
     else:
         # if node.attributes is not None:
+
         #     print()  # todo
         print(node.nodeType)
 
