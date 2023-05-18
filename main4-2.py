@@ -63,7 +63,7 @@ def dfs_isNode(node):
                 childNode.add_label(U2Sdict[child_id])
             else:
                 childNode.add_label(child.getAttribute("xmi:type"))
-            childNode["id"] = child_id
+            childNode["xmi:id"] = child_id
             isNode[child_id] = childNode
         if child.hasChildNodes():
             dfs_isNode(child)
@@ -147,7 +147,7 @@ def create_graph(FILE_NAME):
 
     Data_id = Data.getAttribute("xmi:id")
     root_node = Node()
-    root_node["id"] = Data_id
+    root_node["xmi:id"] = Data_id
     root_node.add_label(Data.nodeName)
     isNode[Data_id] = root_node
 
@@ -160,7 +160,7 @@ def create_graph(FILE_NAME):
     # 本地
     # graph = Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
     # 服务器
-    graph = Graph('bolt://121.40.183.82:7687', auth=('neo4j', '123456'))
+    graph = Graph('bolt://1 21.40.183.82:7687', auth=('neo4j', '123456'))
     #
     ClearGraph(graph)
     createNode(graph)
