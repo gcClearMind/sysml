@@ -70,8 +70,6 @@ def dfs_isNode(node):
 
 
 def dfs_getAttribute(node, fatherNodeId = None):
-    # if node.attributes is None and not node.hasChildNodes():
-    #     print(node)  # todo
     if node.nodeType == 3:
         return
     if node.hasAttribute("xmi:id") and 'href' not in node.attributes.keys():  # 原先是点
