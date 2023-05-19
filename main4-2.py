@@ -55,7 +55,7 @@ def dfs_isNode(node):
         if child.nodeType == 3:
             continue
         if child.hasAttribute("xmi:id") and 'href' not in child.attributes.keys():
-            if node.getAttribute("xmi:type") in NoRead_NodeType:
+            if child.getAttribute("xmi:type") in NoRead_NodeType or child.nodeName in NoRead_NodeName:
                 continue
             childNode = Node()
             child_id = child.getAttribute("xmi:id")
@@ -66,6 +66,8 @@ def dfs_isNode(node):
             childNode["xmi:id"] = child_id
             isNode[child_id] = childNode
         if child.hasChildNodes():
+            if child.getAttribute("xmi:type") in NoRead_NodeType or child.nodeName in NoRead_NodeName:
+                continue
             dfs_isNode(child)
 
 
@@ -154,17 +156,16 @@ def create_graph(FILE_NAME):
     dfs_isNode(Data)
     # find(Data)
     dfs_getAttribute(Data)
-
     # test()
     # # NEO4J链接
     # 本地
-    # graph = Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
+    graph = Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
     # 服务器
-    graph = Graph('bolt://1 21.40.183.82:7687', auth=('neo4j', '123456'))
+    # graph = Graph('bolt://1 21.40.183.82:7687', auth=('neo4j', '123456'))
     #
     ClearGraph(graph)
     createNode(graph)
 
 
 if __name__ == "__main__":
-    create_graph("雷达软件系统.xml")
+    create_graph("InvertedPendulum.xml")
