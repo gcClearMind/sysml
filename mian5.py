@@ -93,13 +93,10 @@ def dfs_isNode(node):
                 continue
             childNode = Node()
             child_id = child.getAttribute("xmi:id")
-
-            childNode.add_label(child.getAttribute("xmi:type"))
-            # todo chuli
             if child_id in U2Sdict.keys():
                 childNode.add_label(U2Sdict[child_id])
-            # else:
-            #     childNode.add_label(child.getAttribute("xmi   :type"))
+            else:
+                childNode.add_label(child.getAttribute("xmi:type"))
             childNode["xmi:id"] = child_id
             isNode[child_id] = childNode
         if child.hasChildNodes():
@@ -111,10 +108,36 @@ def dfs_isNode(node):
 def dfs_getAttribute(node, fatherNodeId = None):
     if node.nodeType == 3:
         return
+
     if node.hasAttribute("xmi:id") and 'href' not in node.attributes.keys():  # 原先是点
         if node.getAttribute("xmi:type") in NoRead_NodeType:  # 扩展和关系因为冗余性不读取
             return
         node_id = node.getAttribute("xmi:id")
+
+        if node.hasAttribute("visibility"):
+            if node.getAttribute("visibility") == 'private':  # 查找是否包含 private 属性
+                link_num = 0
+                link_id = 0
+                name = ''
+                for key in node.attributes.keys():
+                    value = node.attributes[key].value
+                    if value == node_id:
+                        continue
+                    if value in isNode.keys():
+                        link_num += 1
+                        link_id = value
+                        name = key
+                if link_num == 1:
+                    relation = Relationship(isNode[node_id], name, isNode[link_id])
+                    isNode.pop(node_id)
+                    for key in node.attributes.keys():
+                        if key == "xmi:id":
+                            continue
+                        value = node.attributes[key].value
+                        relation[key] = value
+                    RelationList.append(relation)
+                    return
+
         # 属性读取
         for key in node.attributes.keys():
             if key == "xmi:id":
@@ -190,7 +213,6 @@ def create_graph(FILE_NAME):
     root_node.add_label(Data.nodeName)
     isNode[Data_id] = root_node
 
-
     dfs_isNode(Data)
     # find(Data)
     dfs_getAttribute(Data)
@@ -202,7 +224,7 @@ def create_graph(FILE_NAME):
     # 服务器
     # graph = Graph('bolt://120.26.15.210:7687', auth=('neo4j', '123456'))
     #
-    # ClearGraph(graph)
+    ClearGraph(graph)
     createNode(graph)
 
 
