@@ -36,7 +36,11 @@ def get_map(collection):
                 if key.count("base") != 0:
                     element_id = child.attributes[key].value
                     name = child.nodeName
-                    U2Sdict[element_id] = name
+                    if element_id not in U2Sdict.keys():
+                        label_list = [name]
+                        U2Sdict[element_id] = label_list
+                    else:
+                        U2Sdict[element_id].append(name)
 
 
 def get_map_relation(collection):
@@ -49,9 +53,7 @@ def get_map_relation(collection):
                     node_id = child.attributes[key].value
                     break
             for key in child.attributes.keys():
-                if key == 'xmi:id':
-                    continue
-                elif key.count("base") != 0:
+                if key == 'xmi:id' or key.count("base") != 0 or node_id not in isNode.keys():
                     continue
                 else:
                     value = child.attributes[key].value
@@ -63,6 +65,8 @@ def get_map_relation(collection):
 
             for this_child in child.childNodes:
                 if this_child.nodeType == 3:  # 文本类
+                    continue
+                elif node_id not in isNode.keys():
                     continue
                 else:
                     for v in this_child.childNodes:
@@ -97,9 +101,10 @@ def dfs_isNode(node):
             childNode.add_label(child.getAttribute("xmi:type"))
             # todo chuli
             if child_id in U2Sdict.keys():
-                childNode.add_label(U2Sdict[child_id])
+                for label in U2Sdict[child_id]:
+                    childNode.add_label(label)
             # else:
-            #     childNode.add_label(child.getAttribute("xmi   :type"))
+            #     childNode.add_label(child.getAttribute("xmi:type"))
             childNode["xmi:id"] = child_id
             isNode[child_id] = childNode
         if child.hasChildNodes():
@@ -207,4 +212,4 @@ def create_graph(FILE_NAME):
 
 
 if __name__ == "__main__":
-    create_graph("MTSDesign_MobileRobot.xml")
+    create_graph("雷达软件系统.xml")
