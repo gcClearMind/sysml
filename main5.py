@@ -1,20 +1,17 @@
 # -*- coding = utf-8 -*-
-from py2neo import Graph, Node, Relationship, NodeMatcher
+from py2neo import Graph, Node, Relationship
 from xml.dom.minidom import parse
 import xml.dom.minidom
 import configparser
-from Generalization import generalization
 
 # 参数中读取不需要读的信息
 CONFIG_FILE = 'config.ini'
 config = configparser.ConfigParser()
 config.read(CONFIG_FILE)
 
-
 # 节点、关系列表
 NodeList = []
 RelationList = []
-PackageList = []
 NodeDict = {}
 U2Sdict = {}
 isNode = {}
@@ -27,20 +24,28 @@ def read_file(file_name):
     return collection
 
 
+NoRead_prefix = config.get('NoRead', 'prefix').split()
+NoRead_NodeName = config.get('NoRead', 'NodeName').split()
+NoRead_NodeType = config.get('NoRead', 'NodeType').split()
+
+
 # 获得UML与SysML之间的映射
 def get_map(collection):
-    NoRead_prefix = config.get('NoRead', 'prefix').split()
     for child in collection.childNodes:
         if child.prefix not in NoRead_prefix and child.prefix is not None:
             for key in child.attributes.keys():
                 if key.count("base") != 0:
                     element_id = child.attributes[key].value
                     name = child.nodeName
-                    U2Sdict[element_id] = name
+                    # 一个实体可能包含多个标签
+                    if element_id not in U2Sdict.keys():
+                        label_list = [name]
+                        U2Sdict[element_id] = label_list
+                    else:
+                        U2Sdict[element_id].append(name)
 
 
 def get_map_relation(collection):
-    NoRead_prefix = config.get('NoRead', 'prefix').split()
     for child in collection.childNodes:
         if child.prefix not in NoRead_prefix and child.prefix is not None:
             node_id = ''
@@ -49,9 +54,7 @@ def get_map_relation(collection):
                     node_id = child.attributes[key].value
                     break
             for key in child.attributes.keys():
-                if key == 'xmi:id':
-                    continue
-                elif key.count("base") != 0:
+                if key == 'xmi:id' or key.count("base") != 0 or node_id not in isNode.keys():
                     continue
                 else:
                     value = child.attributes[key].value
@@ -64,13 +67,14 @@ def get_map_relation(collection):
             for this_child in child.childNodes:
                 if this_child.nodeType == 3:  # 文本类
                     continue
+                elif node_id not in isNode.keys():
+                    continue
                 else:
                     for v in this_child.childNodes:
                         if v.nodeValue.count("/n/t") != 0:
                             continue
                         else:
                             isNode[node_id][v.nodeName] = v.nodeValue
-
 
 
 # 得到包含数据的Data
@@ -80,12 +84,10 @@ def get_Data(collection):
         return data
 
 
-NoRead_NodeName = config.get('NoRead', 'NodeName').split()
-NoRead_NodeType = config.get('NoRead', 'NodeType').split()
-
-
+# 获取节点
 def dfs_isNode(node):
     for child in node.childNodes:
+        # 去除间隔
         if child.nodeType == 3:
             continue
         if child.hasAttribute("xmi:id") and 'href' not in child.attributes.keys():
@@ -93,51 +95,32 @@ def dfs_isNode(node):
                 continue
             childNode = Node()
             child_id = child.getAttribute("xmi:id")
+            # todo chuli
+            # 将uml类也录入其中
+            childNode.add_label(child.getAttribute("xmi:type"))
+            # 录入使用到的sysml类
             if child_id in U2Sdict.keys():
-                childNode.add_label(U2Sdict[child_id])
-            else:
-                childNode.add_label(child.getAttribute("xmi:type"))
+                for label in U2Sdict[child_id]:
+                    childNode.add_label(label)
+            # else:
+            #     childNode.add_label(child.getAttribute("xmi:type"))
             childNode["xmi:id"] = child_id
             isNode[child_id] = childNode
+        # 有子节点
         if child.hasChildNodes():
             if child.getAttribute("xmi:type") in NoRead_NodeType or child.nodeName in NoRead_NodeName:
                 continue
             dfs_isNode(child)
 
 
-def dfs_getAttribute(node, fatherNodeId = None):
+# 获取节点间的关系
+def dfs_getAttribute(node, fatherNodeId=None):
     if node.nodeType == 3:
         return
-
     if node.hasAttribute("xmi:id") and 'href' not in node.attributes.keys():  # 原先是点
         if node.getAttribute("xmi:type") in NoRead_NodeType:  # 扩展和关系因为冗余性不读取
             return
         node_id = node.getAttribute("xmi:id")
-
-        if node.hasAttribute("visibility"):
-            if node.getAttribute("visibility") == 'private':  # 查找是否包含 private 属性
-                link_num = 0
-                link_id = 0
-                name = ''
-                for key in node.attributes.keys():
-                    value = node.attributes[key].value
-                    if value == node_id:
-                        continue
-                    if value in isNode.keys():
-                        link_num += 1
-                        link_id = value
-                        name = key
-                if link_num == 1:
-                    relation = Relationship(isNode[node_id], name, isNode[link_id])
-                    isNode.pop(node_id)
-                    for key in node.attributes.keys():
-                        if key == "xmi:id":
-                            continue
-                        value = node.attributes[key].value
-                        relation[key] = value
-                    RelationList.append(relation)
-                    return
-
         # 属性读取
         for key in node.attributes.keys():
             if key == "xmi:id":
@@ -156,7 +139,7 @@ def dfs_getAttribute(node, fatherNodeId = None):
         for child in node.childNodes:
             dfs_getAttribute(child, node_id)
 
-    else:   # 处理不是点的属性和链接
+    else:  # 处理不是点的属性和链接
         if node.nodeName in NoRead_NodeName or node.hasAttribute("href"):
             return
         if node.hasAttribute("xmi:idref") and node.getAttribute("xmi:idref") in isNode.keys():
@@ -171,6 +154,7 @@ def dfs_getAttribute(node, fatherNodeId = None):
                     isNode[fatherNodeId][node.nodeName] = child.nodeValue
 
 
+# 测试用
 def test():
     for node in NodeList:
         print(node)
@@ -178,6 +162,7 @@ def test():
         print(relation)
 
 
+# 创建节点
 def createNode(graph):
     for key in isNode.keys():
         graph.create(isNode[key])
@@ -185,28 +170,26 @@ def createNode(graph):
         graph.create(relation)
 
 
-def find(node):
-    if node.nodeType == 3:
-        return
-
-    if node.getAttribute("xmi:id") == '_16_8_24400562_1516347342392_171582_11816':
-        print(111)
-        for child in node.childNodes:
-            print(child)
-    for child in node.childNodes:
-        find(child)
-
-
 # 清空图
 def ClearGraph(graph):
     graph.run("MATCH(n) DETACH DELETE n")
 
 
-def create_graph(FILE_NAME):
+# 初始化
+def init():
+    NodeList.clear()
+    RelationList.clear()
+    NodeDict.clear()
+    U2Sdict.clear()
+    isNode.clear()
+
+
+def create_graph(FILE_NAME, graph):
+    init()
     Collection = read_file(FILE_NAME)
     get_map(Collection)
     Data = get_Data(Collection)
-
+    # 放入根节点
     Data_id = Data.getAttribute("xmi:id")
     root_node = Node()
     root_node["xmi:id"] = Data_id
@@ -218,15 +201,25 @@ def create_graph(FILE_NAME):
     dfs_getAttribute(Data)
     get_map_relation(Collection)
     # test()
-    # # NEO4J链接
+
+    # 输入图谱
+    createNode(graph)
+
+
+def creat_all():
+    #  NEO4J链接
     # 本地
     graph = Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
     # 服务器
     # graph = Graph('bolt://120.26.15.210:7687', auth=('neo4j', '123456'))
     #
     ClearGraph(graph)
-    createNode(graph)
+    create_graph("雷达软件系统.xml", graph)
+    create_graph("MTSDesign_MobileRobot.xml", graph)
+    create_graph("hybrid sport utility vehicle.xml", graph)
+    create_graph("InvertedPendulum.xml", graph)
+    create_graph("Sample_BDD1.xml", graph)
 
 
 if __name__ == "__main__":
-    create_graph("MTSDesign_MobileRobot.xml")
+    creat_all()
