@@ -214,11 +214,11 @@ def creat_all():
     # graph = Graph('bolt://120.26.15.210:7687', auth=('neo4j', '123456'))
     #
     ClearGraph(graph)
-    create_graph("雷达软件系统.xml", graph)
-    create_graph("MTSDesign_MobileRobot.xml", graph)
+    # create_graph("雷达软件系统.xml", graph)
+    # create_graph("MTSDesign_MobileRobot.xml", graph)
     create_graph("hybrid sport utility vehicle.xml", graph)
     create_graph("InvertedPendulum.xml", graph)
-    create_graph("Sample_BDD1.xml", graph)
+    # create_graph("Sample_BDD1.xml", graph)
 
 
 if __name__ == "__main__":
