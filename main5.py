@@ -206,7 +206,7 @@ def create_graph(FILE_NAME, graph):
     createNode(graph)
 
 
-def creat_all():
+def creat_all():    
     #  NEO4J链接
     # 本地
     graph = Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
@@ -217,7 +217,7 @@ def creat_all():
     # create_graph("雷达软件系统.xml", graph)
     # create_graph("MTSDesign_MobileRobot.xml", graph)
     create_graph("hybrid sport utility vehicle.xml", graph)
-    create_graph("InvertedPendulum.xml", graph)
+    # create_graph("InvertedPendulum.xml", graph)
     # create_graph("Sample_BDD1.xml", graph)
 
 
