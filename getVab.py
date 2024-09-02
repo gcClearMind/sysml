@@ -45,7 +45,11 @@ def getRdf(m):
 
     # 定义命名空间
     OSLC_NEO = Namespace("http://localhost:8080/neo4j/neo4j-vocab#")
+    terms = Namespace("http://purl.org/dc/terms/")
+    van = Namespace("http://purl.org/vocab/vann/")
     g.bind("oslc_neo", OSLC_NEO)
+    g.bind("terms", terms)
+    g.bind("van", van)
 
     # 定义本体
     ontology_uri = URIRef("http://localhost:8080/neo4j/neo4j-vocab#")
@@ -88,6 +92,7 @@ def getVab():
     # print(m)
     g = getRdf(m)
     print(g.serialize(format='turtle'))
+    g.serialize(destination="vocab.rdf", format="turtle")
 
 
 if __name__ == "__main__":

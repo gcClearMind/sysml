@@ -1,0 +1,41 @@
+@prefix oslc_neo: <http://localhost:8080/neo4j/neo4j-vocab#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix van: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+oslc_neo:Block a rdfs:Class ;
+    rdfs:label "SysML" ;
+    rdfs:comment "The Neo4j of SysML resource." ;
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of a resource describing a node of neo4j." ;
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo:visibility a rdf:Property ;
+    rdfs:label "visibility" ;
+    rdfs:comment "The visibility of a resource describing a node of neo4j." ;
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo:xmiId a rdf:Property ;
+    rdfs:label "xmi:id" ;
+    rdfs:comment "The xmi:id of a resource describing a node of neo4j." ;
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo:xmiType a rdf:Property ;
+    rdfs:label "xmi:type" ;
+    rdfs:comment "The xmi:type of a resource describing a node of neo4j." ;
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo: a owl:Ontology ;
+    rdfs:label "The neo4j of sysml Vocabulary" ;
+    terms:description "All vocabulary URIs defined in the OSLC Neo4j namespace."^^rdf:XMLLiteral ;
+    terms:issued "2024-09-02"^^xsd:date ;
+    terms:source oslc_neo: ;
+    terms:title "The neo4j of sysml Vocabulary" ;
+    van:preferredNamespacePrefix "oslc_neo" .
+
