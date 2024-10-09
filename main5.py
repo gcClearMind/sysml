@@ -17,7 +17,6 @@ U2Sdict = {}
 isNode = {}
 
 
-# XML文件读取
 def read_file(file_name):
     DOMTree = xml.dom.minidom.parse(file_name)
     collection = DOMTree.documentElement
@@ -29,7 +28,6 @@ NoRead_NodeName = config.get('NoRead', 'NodeName').split()
 NoRead_NodeType = config.get('NoRead', 'NodeType').split()
 
 
-# 获得UML与SysML之间的映射
 def get_map(collection):
     for child in collection.childNodes:
         if child.prefix not in NoRead_prefix and child.prefix is not None:
@@ -45,46 +43,12 @@ def get_map(collection):
                         U2Sdict[element_id].append(name)
 
 
-def get_map_relation(collection):
-    for child in collection.childNodes:
-        if child.prefix not in NoRead_prefix and child.prefix is not None:
-            node_id = ''
-            for key in child.attributes.keys():
-                if key.count("base") != 0:
-                    node_id = child.attributes[key].value
-                    break
-            for key in child.attributes.keys():
-                if key == 'xmi:id' or key.count("base") != 0 or node_id not in isNode.keys():
-                    continue
-                else:
-                    value = child.attributes[key].value
-                    if value in isNode.keys():  # 关联关系为另一个节点 建立关系
-                        relation = Relationship(isNode[node_id], key, isNode[value])
-                        RelationList.append(relation)
-                    else:
-                        isNode[node_id][key] = value
-
-            for this_child in child.childNodes:
-                if this_child.nodeType == 3:  # 文本类
-                    continue
-                elif node_id not in isNode.keys():
-                    continue
-                else:
-                    for v in this_child.childNodes:
-                        if v.nodeValue.count("/n/t") != 0:
-                            continue
-                        else:
-                            isNode[node_id][v.nodeName] = v.nodeValue
-
-
-# 得到包含数据的Data
 def get_Data(collection):
     Datas = collection.getElementsByTagName("uml:Model")
     for data in Datas:
         return data
 
 
-# 获取节点
 def dfs_isNode(node):
     for child in node.childNodes:
         # 去除间隔
@@ -101,7 +65,7 @@ def dfs_isNode(node):
             # 录入使用到的sysml类
             if child_id in U2Sdict.keys():
                 for label in U2Sdict[child_id]:
-                    childNode.add_label(label)
+                    childNode.add_label(standardization(label))
             # else:
             #     childNode.add_label(child.getAttribute("xmi:type"))
             childNode["xmi:id"] = child_id
@@ -117,7 +81,7 @@ def dfs_isNode(node):
 def dfs_getAttribute(node, fatherNodeId=None):
     if node.nodeType == 3:
         return
-    if node.hasAttribute("xmi:id") and 'href' not in node.attributes.keys():  # 原先是点
+    if node.hasAttribute("xmi:id") and 'href' not in node.attributes.keys() and node.nodeName not in NoRead_NodeName:  # 原先是点
         if node.getAttribute("xmi:type") in NoRead_NodeType:  # 扩展和关系因为冗余性不读取
             return
         node_id = node.getAttribute("xmi:id")
@@ -154,6 +118,40 @@ def dfs_getAttribute(node, fatherNodeId=None):
                     isNode[fatherNodeId][node.nodeName] = child.nodeValue
 
 
+def get_map_relation(collection):
+    for child in collection.childNodes:
+        if child.prefix not in NoRead_prefix and child.prefix is not None:
+            node_id = ''
+            for key in child.attributes.keys():
+                if key.count("base") != 0:
+                    node_id = child.attributes[key].value
+                    break
+            for key in child.attributes.keys():
+                if key == 'xmi:id' or key.count("base") != 0 or node_id not in isNode.keys():
+                    continue
+                else:
+                    value = child.attributes[key].value
+                    if value in isNode.keys():  # 关联关系为另一个节点 建立关系
+                        relation = Relationship(isNode[node_id], key, isNode[value])
+                        RelationList.append(relation)
+                    else:
+                        isNode[node_id][key] = value
+
+            for this_child in child.childNodes:
+                if this_child.nodeType == 3:  # 文本类
+                    continue
+                elif node_id not in isNode.keys():
+                    continue
+                else:
+                    for v in this_child.childNodes:
+                        if v.nodeValue.count("/n/t") != 0:
+                            continue
+                        else:
+                            isNode[node_id][v.nodeName] = v.nodeValue
+
+
+
+
 # 测试用
 def test():
     for node in NodeList:
@@ -184,6 +182,18 @@ def init():
     isNode.clear()
 
 
+#标准化(去除除了uml以外的前缀)
+def standardization(label):
+    if label.count("uml:") != 0:
+        return label
+    else:
+        if ':' in label:
+            return label.split(':', 1)[1]
+        else:
+            return label
+
+
+
 def create_graph(FILE_NAME, graph):
     init()
     Collection = read_file(FILE_NAME)
@@ -201,12 +211,13 @@ def create_graph(FILE_NAME, graph):
     dfs_getAttribute(Data)
     get_map_relation(Collection)
     # test()
+    test()
 
     # 输入图谱
     createNode(graph)
 
 
-def creat_all():    
+def creat_all():
     #  NEO4J链接
     # 本地
     graph = Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
@@ -221,5 +232,5 @@ def creat_all():
     # create_graph("Sample_BDD1.xml", graph)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     creat_all()
