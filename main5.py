@@ -220,14 +220,14 @@ def create_graph(FILE_NAME, graph):
 def creat_all():
     #  NEO4J链接
     # 本地
-    graph = Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
+    graph = Graph('bolt://localhost:11003', auth=('neo4j', '12345678'))
     # 服务器
     # graph = Graph('bolt://120.26.15.210:7687', auth=('neo4j', '123456'))
     #
     ClearGraph(graph)
     # create_graph("雷达软件系统.xml", graph)
     # create_graph("MTSDesign_MobileRobot.xml", graph)
-    create_graph("hybrid sport utility vehicle.xml", graph)
+    create_graph("Egypt-2--11.22.xml", graph)
     # create_graph("InvertedPendulum.xml", graph)
     # create_graph("Sample_BDD1.xml", graph)
 
