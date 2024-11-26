@@ -84,8 +84,8 @@ def getRdf(m):
 
 
 def getVab():
-    graph = py2neo.Graph('bolt://localhost:7687', auth=('neo4j', '12345678'))
-    name = "Blocks:Block"
+    graph = py2neo.Graph('bolt://localhost:11003', auth=('neo4j', '12345678'))
+    name = "Block"
 
     properties = getProperty(name, graph)
     m = {name: properties}
