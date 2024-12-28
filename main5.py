@@ -131,6 +131,22 @@ def get_map_relation(collection):
                     continue
                 else:
                     value = child.attributes[key].value
+                    if value.count(" ") != 0:
+                        spts = value.split(" ")
+                        flag = 0
+                        for spt in spts:
+                            if spt in isNode.keys():
+                                  continue
+                            else:
+                                flag = 1
+                                break
+                        if flag == 1:
+                            isNode[node_id][key] = value
+                        else:
+                            for spt in spts:
+                                relation = Relationship(isNode[node_id], key, isNode[spt])
+                                RelationList.append(relation)
+                        continue
                     if value in isNode.keys():  # 关联关系为另一个节点 建立关系
                         relation = Relationship(isNode[node_id], key, isNode[value])
                         RelationList.append(relation)
