@@ -1,0 +1,1047 @@
+Camera-node_1927	ownedAttribute	SpecWidthErr-node_1970
+NestedConnectorEnd-node_1826	propertyPath	PartProperty-node_1822
+uml:Slot-node_5819	is	uml:Slot
+uml:ObjectFlow-node_2104	edge	Verify Sensor Resolution-node_2099
+Camera-node_1927	ownedAttribute	lifetime-node_1964
+mbps-node_5529	type	data rate-node_2046
+uml:InputPin-node_2136	is	uml:InputPin
+AllocateActivityPartition-node_2520	node	uml:CallBehaviorAction-node_2526
+SpecWidthErr-node_1970	definingFeature	uml:Slot-node_6287
+AllocateActivityPartition-node_2124	partition	Verify Sensor Resolution-node_2099
+Camera-node_1927	ownedAttribute	光学系统多光谱MTF-node_2016
+uml:CallBehaviorAction-node_2126	node	Verify Sensor Resolution-node_2099
+Camera-node_1927	ownedAttribute	data rate-node_1960
+observation data-node_2545	node	Collect and Downlnk Observation Data-p-node_2501
+mass-node_2040	is	ValueProperty
+system-under-test-node_2073	represents	AllocateActivityPartition-node_2122
+Verify Mass-node_2842	group	AllocateActivityPartition-node_2845
+uml:ControlFlow-node_2112	inPartition	AllocateActivityPartition-node_2120
+uml:Connector-node_1830	end	NestedConnectorEnd-node_1832
+Test Operator-node_2832	Allocate	Control Unit-Under-Test-node_2162
+uml:InputPin-node_2527	argument	uml:CallBehaviorAction-node_2526
+uml:Slot-node_5861	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:Slot-node_5839	is	uml:Slot
+Process Signal-node_1914	behavior	uml:CallBehaviorAction-node_2138
+Verification Context-Mass Properties-node_2835	ownedOperation	verify mass-node_2839
+uml:InputPin-node_2531	argument	uml:CallBehaviorAction-node_2530
+milliradian-node_5531	type	resolution-node_2050
+Camera-node_1927	classifierBehavior	Payload Sensor States-node_1934
+lifetime-node_1964	redefinedProperty	lifetime-node_2056
+Camera-node_1927	ownedAttribute	CCD输出电压Vccd多光谱低端-node_1994
+sensitivity-node_1963	definingFeature	uml:Slot-node_5849
+uml:Parameter-node_1944	ownedParameter	Sense Thermal Emissions-node_1942
+uml:ObjectFlow-node_2102	source	uml:OutputPin-node_2142
+verdict-node_2843	is	uml:Parameter
+AllocateActivityPartition-node_2524	partition	Collect and Downlnk Observation Data-p-node_2501
+AllocateActivityPartition-node_2845	partition	Verify Mass-node_2842
+uml:Connector-node_1839	end	NestedConnectorEnd-node_1841
+uml:Slot-node_5875	is	uml:Slot
+verify sensor resolution-node_2090	is	TestCase
+uml:Slot-node_5867	is	uml:Slot
+power-node_1958	definingFeature	uml:Slot-node_5845
+result-node_2159	ownedParameter	Display Imagery-node_2157
+Observation Data-node_5316	type	uml:InputPin-node_2136
+Shape-node_5533	type	size-node_1959
+Verify Sensor Resolution-node_2099	partition	AllocateActivityPartition-node_2124
+uml:ObjectFlow-node_2110	is	uml:ObjectFlow
+uml:CallBehaviorAction-node_2526	is	uml:CallBehaviorAction
+PartProperty-node_1822	partWithPort	NestedConnectorEnd-node_1852
+Thermal Imagery-node_5356	type	uml:InputPin-node_2144
+on-node_1941	doActivity	Sense Thermal Emissions-node_1942
+Collect and Downlnk Observation Data-p-node_2501	is	uml:Activity
+Camera-node_1927	Allocate	Sense Thermal Emissions-node_1942
+uml:OutputPin-node_2140	is	uml:OutputPin
+Camera-node_1927	ownedAttribute	量化饱和电压多光谱-node_2008
+argument-node_2158	ownedParameter	Display Imagery-node_2157
+uml:Parameter-node_1944	parameter	uml:ActivityParameterNode-node_1947
+Camera-node_1927	ownedOperation	sense thermal emissions-node_2020
+CCD输出电压Vccd多光谱低端-node_1994	definingFeature	uml:Slot-node_5831
+AllocateActivityPartition-node_2844	group	Verify Mass-node_2842
+uml:CallBehaviorAction-node_2126	is	uml:CallBehaviorAction
+uml:ControlFlow-node_2118	source	uml:CallBehaviorAction-node_2141
+AllocateActivityPartition-node_2120	inPartition	uml:InitialNode-node_2147
+uml:CallBehaviorAction-node_2130	node	Verify Sensor Resolution-node_2099
+Sensor CMD-node_5354	is	Block
+AllocateActivityPartition-node_2524	group	Collect and Downlnk Observation Data-p-node_2501
+size-node_1959	definingFeature	uml:Slot-node_5851
+Spacecraft-Physical-node_426	type	system-under-test-node_2073
+uml:Slot-node_6323	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+Mass-node_2209	is	Requirement
+Verify Mass-node_2842	Verify	Mass 卫星-node_333
+AllocateActivityPartition-node_2521	inPartition	uml:CallBehaviorAction-node_2526
+CCD数量-node_1982	definingFeature	uml:Slot-node_5825
+uml:ObjectFlow-node_2106	source	uml:OutputPin-node_2140
+observation data-node_2545	is	uml:ActivityParameterNode
+Verify Mass-node_2842	method	verify mass-node_2839
+TTC_mass-node_2410	is	ValueProperty
+Mass 卫星-node_333	is	Requirement
+Mid-Range IR Scanner-node_2038	is	Block
+uml:Slot-node_5825	is	uml:Slot
+power-node_1930	constrainedElement	on-node_1941
+verdict-node_2847	is	uml:ActivityParameterNode
+Mid-Range IR Scanner-node_2038	ownedAttribute	power-node_2042
+AllocateActivityPartition-node_2125	node	uml:CallBehaviorAction-node_2135
+NestedConnectorEnd-node_3102	role	mass-node_437
+NestedConnectorEnd-node_1832	is	NestedConnectorEnd
+SMS_mass-node_1721	type	kilogram-node_1635
+CCD拼接片间重合像元数-node_1984	definingFeature	uml:Slot-node_6275
+uml:CallBehaviorAction-node_2141	inPartition	AllocateActivityPartition-node_2120
+Camera-node_1927	ownedAttribute	多光谱像元尺寸-node_1978
+data rate-node_1960	Refine	Data Rate-node_2215
+argument-node_1915	ownedParameter	Process Signal-node_1914
+Thermal Imagery-node_5356	type	result-node_2161
+uml:Slot-node_5847	definingFeature	resolution-node_1962
+AllocateActivityPartition-node_2520	inPartition	uml:CallBehaviorAction-node_2526
+电子学系统MTF-node_2012	definingFeature	uml:Slot-node_6323
+uml:OutputPin-node_2129	source	uml:ObjectFlow-node_2104
+uml:CallBehaviorAction-node_2133	result	uml:OutputPin-node_2134
+verify sensor sensitivity-node_2091	specification	Verify Sensor Sensitivity-node_2148
+Assess Pass/Fail-node_2168	is	uml:Activity
+uml:Slot-node_6289	definingFeature	data rate-node_1960
+DTS Subsystem-node_1126	ownedAttribute	Data rate-node_1139
+verify sensor sensitivity-node_2091	is	TestCase
+p1-node_1966	role	NestedConnectorEnd-node_1841
+argument-node_1917	node	Process Signal-node_1914
+AllocateActivityPartition-node_2121	inPartition	uml:CallBehaviorAction-node_2130
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5841
+power-node_2042	Satisfy	Power-node_2211
+argument-node_2158	is	uml:Parameter
+uml:Slot-node_5857	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:ControlFlow-node_2118	target	uml:CallBehaviorAction-node_2133
+uml:Slot-node_5865	is	uml:Slot
+CCD输出电压Vccd多光谱低端-node_1994	definingFeature	uml:Slot-node_6283
+uml:CallBehaviorAction-node_2141	node	AllocateActivityPartition-node_2120
+uml:Slot-node_5849	definingFeature	sensitivity-node_1963
+Payload Sensor Data-node_5355	type	uml:OutputPin-node_2529
+Display-node_2092	represents	AllocateActivityPartition-node_2125
+Payload Subsystem-node_1770	is	Block
+uml:Slot-node_5845	definingFeature	power-node_1958
+Camera-node_1927	ownedAttribute	CCD_MSMTF-node_1974
+光学系统全色MTF-node_2014	definingFeature	uml:Slot-node_6307
+CCD输出电压Vccd全色高端-node_1990	definingFeature	uml:Slot-node_6281
+uml:Slot-node_5873	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:Slot-node_5883	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:ControlFlow-node_2116	inPartition	AllocateActivityPartition-node_2120
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5849
+on-node_1941	subvertex	uml:Region-node_1935
+Camera-node_1927	ownedRule	power-node_1930
+uml:Transition-node_1952	transition	uml:Region-node_1935
+Camera-node_1927	ownedAttribute	sensor data i/f-node_1956
+Verify Sensor Resolution-node_2099	edge	uml:ControlFlow-node_2116
+Camera-node_1927	ownedAttribute	CCD输出电压Vccd全色高端-node_1990
+光学系统多光谱MTF-node_2016	is	ValueProperty
+uml:Slot-node_5831	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Camera-node_1927	ownedAttribute	observation sensor i/f-node_1955
+uml:Slot-node_5865	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:Slot-node_5837	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Shape-node_5533	type	size-node_2044
+uml:Slot-node_5821	is	uml:Slot
+Data rate-node_1139	is	ValueProperty
+Verification Context-Sensor Performance-node_2072	ownedOperation	verify sensor resolution-node_2090
+flow for Payload Sensor Data-node_1880	is	uml:InformationFlow
+uml:Slot-node_5877	is	uml:Slot
+uml:ObjectFlow-node_2104	is	uml:ObjectFlow
+PSS_mass-node_945	type	kilogram-node_1635
+Verify Sensor Resolution-node_2099	group	AllocateActivityPartition-node_2122
+uml:Slot-node_5885	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+AllocateActivityPartition-node_2120	partition	Verify Sensor Resolution-node_2099
+system-under-test-node_2073	partWithPort	NestedConnectorEnd-node_2080
+mass-node_1957	redefinedProperty	mass-node_2040
+off-node_1937	source	uml:Transition-node_1950
+data rate-node_2046	Satisfy	Data Rate-node_2215
+Camera-node_1927	ownedAttribute	p1-node_1966
+uml:ControlFlow-node_2116	edge	AllocateActivityPartition-node_2120
+OBDH Subsystem-node_1298	represents	AllocateActivityPartition-node_2525
+on-node_1941	source	uml:Transition-node_1952
+Harness_mass-node_1468	is	ValueProperty
+AllocateActivityPartition-node_2522	is	AllocateActivityPartition
+AllocateActivityPartition-node_2523	is	AllocateActivityPartition
+unit-under-test-node_1780	redefinedProperty	PartProperty-node_1822
+uml:ActivityParameterNode-node_1946	parameter	uml:Parameter-node_1943
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem-node_6194	slot	uml:Slot-node_6233
+result-node_2161	is	uml:ActivityParameterNode
+Power Subsystem-node_927	is	Block
+uml:CallBehaviorAction-node_2145	is	uml:CallBehaviorAction
+result-node_2159	parameter	result-node_2161
+Payload SW-node_1769	is	Block
+uml:Slot-node_5841	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Optical Bench-node_2070	Allocate	Generate Thermal Emission-node_2149
+uml:Slot-node_6329	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+TTC_mass-node_2410	type	kilogram-node_1635
+result-node_2164	is	uml:ActivityParameterNode
+uml:ControlFlow-node_2112	edge	Verify Sensor Resolution-node_2099
+AllocateActivityPartition-node_2120	inPartition	uml:CallBehaviorAction-node_2141
+resolution-node_1962	redefinedProperty	resolution-node_2050
+uml:CallBehaviorAction-node_2143	is	uml:CallBehaviorAction
+uml:ControlFlow-node_2114	inPartition	AllocateActivityPartition-node_2120
+uml:ObjectFlow-node_2100	is	uml:ObjectFlow
+Camera-node_1927	ownedAttribute	CCD_PANMTF-node_1972
+argument-node_2166	parameter	argument-node_2167
+Process Signal-node_1914	is	uml:Activity
+uml:OutputPin-node_2532	is	uml:OutputPin
+AllocateActivityPartition-node_2120	node	uml:CallBehaviorAction-node_2133
+NestedConnectorEnd-node_2080	propertyPath	system-under-test-node_2073
+lifetime-node_2056	Satisfy	Reliability-node_2205
+uml:ObjectFlow-node_2100	edge	Verify Sensor Resolution-node_2099
+量化位数-node_1986	is	ValueProperty
+resolution-node_1962	is	ValueProperty
+uml:ControlFlow-node_2112	edge	AllocateActivityPartition-node_2120
+sensor data i/f-node_1956	informationSource	flow for Payload Sensor Data-node_1880
+PartProperty-node_1772	propertyPath	NestedConnectorEnd-node_1832
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6301
+system-under-test-node_2073	propertyPath	NestedConnectorEnd-node_2080
+AllocateActivityPartition-node_2120	inPartition	uml:CallBehaviorAction-node_2145
+uml:CallBehaviorAction-node_2138	node	AllocateActivityPartition-node_2124
+AllocateActivityPartition-node_2525	partition	Collect and Downlnk Observation Data-p-node_2501
+uml:InputPin-node_2144	target	uml:ObjectFlow-node_2108
+off-node_1937	is	uml:State
+AllocateActivityPartition-node_2122	partition	Verify Sensor Resolution-node_2099
+uml:Slot-node_5792	is	uml:Slot
+量化饱和电压全色-node_2006	definingFeature	uml:Slot-node_5881
+Payload Sensor Data-node_5355	is	Block
+uml:Slot-node_5829	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+on-node_1941	target	uml:Transition-node_1950
+Mid-Range IR Scanner-node_2038	ownedAttribute	data rate-node_2046
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem-node_6194	is	uml:InstanceSpecification
+data rate-node_2046	type	mbps-node_5529
+Verify Mass-node_2842	node	verdict-node_2847
+AllocateActivityPartition-node_2525	group	Collect and Downlnk Observation Data-p-node_2501
+uml:InitialNode-node_2147	node	Verify Sensor Resolution-node_2099
+mass-node_2040	Satisfy	Mass-node_2209
+光学系统多光谱MTF-node_2016	definingFeature	uml:Slot-node_6309
+uml:CallBehaviorAction-node_2133	target	uml:ControlFlow-node_2118
+Sense Thermal Emissions-node_1942	node	uml:ActivityParameterNode-node_1948
+NestedConnectorEnd-node_3103	end	BindingConnector-node_3101
+AllocateActivityPartition-node_2122	node	uml:CallBehaviorAction-node_2126
+uml:Slot-node_5792	definingFeature	Payload_mass-node_1792
+mass-node_164	redefinedProperty	mass-node_437
+AllocateActivityPartition-node_2124	inPartition	uml:CallBehaviorAction-node_2138
+Payload Sensor Data-node_5355	type	uml:ActivityParameterNode-node_1948
+on-node_1941	Refine	MTF-node_2213
+Display-node_2092	Allocate	Display Imagery-node_2157
+Sense Thermal Emissions-node_1942	ownedParameter	uml:Parameter-node_1945
+uml:ActivityFinalNode-node_2146	node	Verify Sensor Resolution-node_2099
+p1-node_1966	is	uml:Port
+多光谱像元尺寸-node_1978	definingFeature	uml:Slot-node_5867
+verdict-node_2847	node	Verify Mass-node_2842
+Structure & Mechanisms Subsystem-node_1703	ownedAttribute	SMS_mass-node_1721
+AllocateActivityPartition-node_2124	node	uml:CallBehaviorAction-node_2138
+CCD输出电压Vccd全色高端-node_1990	is	ValueProperty
+AllocateActivityPartition-node_2120	node	uml:CallBehaviorAction-node_2141
+Control Thermal Source-node_2154	is	uml:Activity
+uml:CallBehaviorAction-node_2145	node	AllocateActivityPartition-node_2120
+Structure & Mechanisms Subsystem-node_1703	is	Block
+uml:Slot-node_5768	is	uml:Slot
+OBDH_mass-node_1315	type	kilogram-node_1635
+uml:ObjectFlow-node_2106	target	uml:InputPin-node_2136
+uml:Slot-node_6337	is	uml:Slot
+uml:Slot-node_6315	is	uml:Slot
+verify sensor resolution-node_2090	method	Verify Sensor Resolution-node_2099
+AllocateActivityPartition-node_2523	subpartition	AllocateActivityPartition-node_2520
+mass-node_1957	is	ValueProperty
+uml:Transition-node_1952	source	on-node_1941
+CCD拼接片间重合像元数-node_1984	is	ValueProperty
+uml:Slot-node_5823	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Verification Context-Sensor Performance-node_2072	ownedConnector	uml:Connector-node_2078
+resolution-node_2050	redefinedProperty	resolution-node_1962
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2143
+NestedConnectorEnd-node_1831	propertyPath	PartProperty-node_1822
+argument-node_2167	node	Measure Resolution-node_2165
+uml:Slot-node_5851	definingFeature	size-node_1959
+uml:OutputPin-node_2142	result	uml:CallBehaviorAction-node_2141
+AllocateActivityPartition-node_2120	inPartition	uml:CallBehaviorAction-node_2133
+AllocateActivityPartition-node_2120	inPartition	uml:ControlFlow-node_2114
+uml:ActivityParameterNode-node_1946	node	Sense Thermal Emissions-node_1942
+uml:ActivityParameterNode-node_1947	parameter	uml:Parameter-node_1944
+BindingConnector-node_3188	end	NestedConnectorEnd-node_3189
+uml:InputPin-node_2128	is	uml:InputPin
+sensor data if-node_1871	role	NestedConnectorEnd-node_1832
+unit-under-test-node_1780	represents	AllocateActivityPartition-node_2123
+uml:InputPin-node_2531	is	uml:InputPin
+Camera-node_1927	ownedAttribute	field of view-node_1961
+uml:Slot-node_5855	is	uml:Slot
+uml:OutputPin-node_2129	is	uml:OutputPin
+Payload Subsystem-node_1770	classifier	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem-node_6194
+Verify Sensor Resolution-node_2099	group	AllocateActivityPartition-node_2125
+uml:Slot-node_6209	definingFeature	PartProperty-node_1822
+BindingConnector-node_3224	is	BindingConnector
+uml:Slot-node_6289	is	uml:Slot
+NestedConnectorEnd-node_3189	role	Payload_mass-node_1792
+uml:Slot-node_5861	is	uml:Slot
+uml:Slot-node_6287	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+AllocateActivityPartition-node_2120	inPartition	uml:CallBehaviorAction-node_2143
+Camera-node_1927	ownedAttribute	量化饱和电压全色-node_2006
+uml:Slot-node_5825	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Verify Sensor Resolution-node_2099	partition	AllocateActivityPartition-node_2121
+NestedConnectorEnd-node_3103	is	NestedConnectorEnd
+DTS_mass-node_1163	is	ValueProperty
+uml:Slot-node_5869	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+TTC Subsystem-node_2396	ownedAttribute	TTC_mass-node_2410
+Payload Sensor Data-node_5355	type	uml:Parameter-node_1945
+NestedConnectorEnd-node_3102	is	NestedConnectorEnd
+uml:ActivityParameterNode-node_1946	is	uml:ActivityParameterNode
+Signal Processor-node_1869	ownedAttribute	sensor data if-node_1871
+Field of View-node_2214	is	Requirement
+Verify Mass-node_2842	group	AllocateActivityPartition-node_2844
+camera Parameters Analysis.payload Subsystem-node_5767	is	uml:InstanceSpecification
+AllocateActivityPartition-node_2845	group	Verify Mass-node_2842
+焦距-node_2010	is	ValueProperty
+uml:Connector-node_1830	end	NestedConnectorEnd-node_1831
+sensor data i/f-node_1956	is	uml:Port
+uml:InputPin-node_2144	argument	uml:CallBehaviorAction-node_2143
+argument-node_2166	is	uml:Parameter
+uml:ControlFlow-node_2114	edge	Verify Sensor Resolution-node_2099
+result-node_2163	parameter	result-node_2164
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2126
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6297
+Camera-node_1927	ownedAttribute	电子学系统MTF-node_2012
+uml:ObjectFlow-node_2106	edge	Verify Sensor Resolution-node_2099
+uml:Slot-node_5879	is	uml:Slot
+多光谱像元尺寸-node_1978	definingFeature	uml:Slot-node_6319
+AllocateActivityPartition-node_2120	inPartition	uml:ControlFlow-node_2118
+uml:Slot-node_5835	is	uml:Slot
+AllocateActivityPartition-node_2845	is	AllocateActivityPartition
+uml:Slot-node_5841	definingFeature	lifetime-node_1964
+电子学系统MTF-node_2012	definingFeature	uml:Slot-node_5871
+光学系统全色MTF-node_2014	definingFeature	uml:Slot-node_5855
+Payload Subsystem-node_1770	represents	AllocateActivityPartition-node_2520
+uml:ObjectFlow-node_2108	edge	Verify Sensor Resolution-node_2099
+Signal Processor-node_2071	Allocate	Process Signal-node_1914
+verify sensor resolution-node_2090	specification	Verify Sensor Resolution-node_2099
+sense thermal emissions-node_2020	is	uml:Operation
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6295
+uml:CallBehaviorAction-node_2126	node	AllocateActivityPartition-node_2123
+电荷输出转换效率CCE多光谱-node_2004	definingFeature	uml:Slot-node_5875
+uml:OutputPin-node_2142	is	uml:OutputPin
+uml:Slot-node_6289	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+NestedConnectorEnd-node_1832	role	sensor data if-node_1871
+镜头装调因子K-node_2018	is	ValueProperty
+uml:Slot-node_6277	is	uml:Slot
+p2-node_1967	is	uml:Port
+size-node_1959	Refine	Size-node_2210
+resolution-node_2050	type	milliradian-node_5531
+uml:Slot-node_5873	is	uml:Slot
+AllocateActivityPartition-node_2125	group	Verify Sensor Resolution-node_2099
+AllocateActivityPartition-node_2846	group	Verify Mass-node_2842
+uml:Slot-node_5841	is	uml:Slot
+mass-node_437	Satisfy	Mass 卫星-node_333
+Payload Subsystem-node_1770	ownedConnector	uml:Connector-node_1824
+全色像元尺寸-node_1976	is	ValueProperty
+Verification Context-Mass Properties-node_2835	is	Block
+uml:CallBehaviorAction-node_2143	source	uml:ControlFlow-node_2112
+uml:Slot-node_6233	definingFeature	Payload_mass-node_1792
+uml:Slot-node_6299	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+Thermal Imagery-node_5356	type	argument-node_2167
+Shape-node_5533	is	ValueType
+Control Unit-Under-Test-node_2162	is	uml:Activity
+Camera-node_1927	ownedAttribute	power-node_1958
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5839
+Sat Mass卫星重量-node_4668	is	moe
+uml:Slot-node_6293	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+kilogram-node_1635	is	ValueType
+AllocateActivityPartition-node_2520	node	uml:CallBehaviorAction-node_2530
+NestedConnectorEnd-node_3189	is	NestedConnectorEnd
+uml:CallBehaviorAction-node_2135	result	uml:OutputPin-node_2137
+sensitivity-node_1963	definingFeature	uml:Slot-node_6301
+uml:Slot-node_6293	definingFeature	lifetime-node_1964
+Payload Subsystem-node_1770	ownedAttribute	Payload_mass-node_1792
+uml:OutputPin-node_2140	result	uml:CallBehaviorAction-node_2138
+uml:CallBehaviorAction-node_2135	is	uml:CallBehaviorAction
+Generate Thermal Emission-node_2149	behavior	uml:CallBehaviorAction-node_2130
+resolution-node_1962	Refine	MTF-node_2213
+PSS_mass-node_945	is	ValueProperty
+uml:ObjectFlow-node_2104	source	uml:OutputPin-node_2129
+observation sensor i/f-node_1955	role	NestedConnectorEnd-node_1826
+uml:ControlFlow-node_2114	edge	AllocateActivityPartition-node_2120
+uml:Slot-node_5867	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:CallBehaviorAction-node_2133	is	uml:CallBehaviorAction
+mbps-node_5529	is	ValueType
+uml:OutputPin-node_2137	source	uml:ObjectFlow-node_2108
+Thermal Subsystem-node_1382	ownedAttribute	TCS_mass-node_1403
+AllocateActivityPartition-node_2521	node	uml:CallBehaviorAction-node_2526
+uml:ControlFlow-node_2118	is	uml:ControlFlow
+AllocateActivityPartition-node_2520	group	Collect and Downlnk Observation Data-p-node_2501
+uml:OutputPin-node_2529	is	uml:OutputPin
+uml:Slot-node_6303	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+argument-node_2160	is	uml:ActivityParameterNode
+AllocateActivityPartition-node_2521	subpartition	AllocateActivityPartition-node_2520
+AllocateActivityPartition-node_2121	is	AllocateActivityPartition
+sensitivity-node_2052	redefinedProperty	sensitivity-node_1963
+Reliability-node_2205	is	Requirement
+NestedConnectorEnd-node_3225	is	NestedConnectorEnd
+Verify Sensor Resolution-node_2099	is	TestCase
+uml:Slot-node_6279	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+result-node_2164	parameter	result-node_2163
+Payload Sensor Data-node_5355	type	uml:InputPin-node_2139
+CCD输出电压Vccd全色低端-node_1988	definingFeature	uml:Slot-node_6279
+uml:CallBehaviorAction-node_2133	inPartition	AllocateActivityPartition-node_2120
+NestedConnectorEnd-node_1831	is	NestedConnectorEnd
+sensor data if-node_1871	informationTarget	flow for Payload Sensor Data-node_1880
+Sense Thermal Emissions-node_1942	node	uml:ActivityParameterNode-node_1946
+verify sensor sensitivity-node_2091	method	Verify Sensor Sensitivity-node_2148
+uml:OutputPin-node_2137	is	uml:OutputPin
+uml:Slot-node_5827	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:Slot-node_5829	is	uml:Slot
+uml:ControlFlow-node_2118	edge	Verify Sensor Resolution-node_2099
+uml:ObjectFlow-node_2108	source	uml:OutputPin-node_2137
+data rate-node_2046	redefinedProperty	data rate-node_1960
+uml:Slot-node_6285	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:Slot-node_6297	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:ActivityFinalNode-node_2146	target	uml:ControlFlow-node_2114
+sensitivity-node_1963	redefinedProperty	sensitivity-node_2052
+milliradian-node_5531	type	field of view-node_1961
+uml:ControlFlow-node_2116	is	uml:ControlFlow
+Signal Processor-node_1869	represents	AllocateActivityPartition-node_2523
+Thermal Subsystem-node_1382	is	Block
+uml:CallBehaviorAction-node_2141	source	uml:ControlFlow-node_2118
+uml:Slot-node_6331	is	uml:Slot
+uml:CallBehaviorAction-node_2138	node	Verify Sensor Resolution-node_2099
+uml:CallBehaviorAction-node_2130	is	uml:CallBehaviorAction
+uml:Connector-node_1839	is	uml:Connector
+uml:Slot-node_5871	is	uml:Slot
+system-under-test-node_2073	is	ReferenceProperty
+AllocateActivityPartition-node_2124	is	AllocateActivityPartition
+Sat Mass卫星重量-node_4668	Allocate	mass-node_164
+sensitivity-node_2052	is	ValueProperty
+电路噪声VN2-node_2000	is	ValueProperty
+Payload Subsystem-node_1770	ownedAttribute	unit-under-test-node_1780
+uml:Slot-node_5837	definingFeature	data rate-node_1960
+uml:Slot-node_6325	is	uml:Slot
+mass-node_2040	redefinedProperty	mass-node_1957
+AllocateActivityPartition-node_2120	inPartition	uml:ActivityFinalNode-node_2146
+Payload Sensor Data-node_5355	type	argument-node_1917
+power-node_2042	redefinedProperty	power-node_1958
+BindingConnector-node_3224	end	NestedConnectorEnd-node_3225
+Verify Sensor Sensitivity-node_2148	Verify	MTF-node_2213
+uml:Slot-node_5845	is	uml:Slot
+Sensor CMD-node_5354	type	uml:InputPin-node_2127
+Sensor CMD-node_5354	type	result-node_2163
+uml:Transition-node_1952	is	uml:Transition
+器件噪声VN1全色-node_1996	is	ValueProperty
+uml:Slot-node_5849	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+CCD输出电压Vccd全色低端-node_1988	is	ValueProperty
+Camera-node_1927	constrainedElement	power-node_1930
+uml:Slot-node_6233	is	uml:Slot
+AllocateActivityPartition-node_2844	is	AllocateActivityPartition
+PartProperty-node_1772	is	PartProperty
+PartProperty-node_1822	partWithPort	NestedConnectorEnd-node_1831
+uml:InitialNode-node_2147	node	AllocateActivityPartition-node_2120
+thermal-node_2132	source	uml:ObjectFlow-node_2110
+Signal Processor-node_2071	represents	AllocateActivityPartition-node_2124
+uml:Slot-node_6285	is	uml:Slot
+Optical Bench-node_2070	represents	AllocateActivityPartition-node_2121
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6289
+Camera-node_1927	ownedAttribute	CCD拼接片间重合像元数-node_1984
+data rate-node_1960	type	mbps-node_5529
+电荷输出转换效率CCE全色-node_2002	definingFeature	uml:Slot-node_5873
+Verify Sensor Resolution-node_2099	node	uml:InitialNode-node_2147
+uml:Region-node_1935	is	uml:Region
+Camera-node_1927	ownedAttribute	器件噪声VN1全色-node_1996
+uml:Parameter-node_1945	ownedParameter	Sense Thermal Emissions-node_1942
+单片CCD全色像元数-node_1980	definingFeature	uml:Slot-node_5861
+RF-node_5345	type	observation data-node_2502
+uml:InitialNode-node_2147	is	uml:InitialNode
+Camera-node_1927	classifier	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+AllocateActivityPartition-node_2123	node	uml:CallBehaviorAction-node_2126
+power-node_1958	definingFeature	uml:Slot-node_6297
+spectrum-node_1968	is	ValueProperty
+verdict-node_2847	parameter	verdict-node_2843
+result-node_1916	is	uml:Parameter
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5851
+Sensor CMD-node_5354	type	uml:OutputPin-node_2142
+AllocateActivityPartition-node_2120	edge	uml:ControlFlow-node_2116
+AllocateActivityPartition-node_2522	subpartition	AllocateActivityPartition-node_2520
+Camera-node_1927	ownedAttribute	光学系统全色MTF-node_2014
+uml:Slot-node_6279	is	uml:Slot
+uml:Slot-node_6305	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+BindingConnector-node_3101	end	NestedConnectorEnd-node_3102
+uml:Slot-node_6331	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:ObjectFlow-node_2106	is	uml:ObjectFlow
+argument-node_2158	parameter	argument-node_2160
+AllocateActivityPartition-node_2123	is	AllocateActivityPartition
+Electrical Interface-node_2224	is	Requirement
+uml:Slot-node_5883	is	uml:Slot
+uml:CallBehaviorAction-node_2130	node	AllocateActivityPartition-node_2121
+uml:ControlFlow-node_2116	edge	Verify Sensor Resolution-node_2099
+uml:Slot-node_6281	is	uml:Slot
+camera Parameters Analysis.payload Subsystem-node_5767	slot	uml:Slot-node_5792
+量化饱和电压多光谱-node_2008	is	ValueProperty
+Verification Context-Sensor Performance-node_2072	ownedAttribute	system-under-test-node_2073
+量化饱和电压全色-node_2006	is	ValueProperty
+Payload Subsystem-node_1770	ownedConnector	uml:Connector-node_1851
+NestedConnectorEnd-node_1852	propertyPath	PartProperty-node_1822
+uml:CallBehaviorAction-node_2130	inPartition	AllocateActivityPartition-node_2121
+uml:Slot-node_5859	is	uml:Slot
+sensitivity-node_1963	Refine	MTF-node_2213
+uml:Slot-node_6305	is	uml:Slot
+uml:OutputPin-node_2134	source	uml:ObjectFlow-node_2100
+uml:Parameter-node_1943	ownedParameter	Sense Thermal Emissions-node_1942
+uml:Slot-node_6277	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+Verify Mass-node_2842	specification	verify mass-node_2839
+uml:Slot-node_6273	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+NestedConnectorEnd-node_1826	is	NestedConnectorEnd
+uml:Parameter-node_1944	is	uml:Parameter
+field of view-node_1961	definingFeature	uml:Slot-node_5839
+uml:Region-node_1935	transition	uml:Transition-node_1950
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5845
+AllocateActivityPartition-node_2521	is	AllocateActivityPartition
+Sense Thermal Emissions-node_1942	doActivity	on-node_1941
+uml:ControlFlow-node_2118	inPartition	AllocateActivityPartition-node_2120
+resolution-node_1962	definingFeature	uml:Slot-node_5847
+Sensor CMD-node_5354	type	uml:Parameter-node_1943
+Power Subsystem-node_927	ownedAttribute	PSS_mass-node_945
+Camera-node_1927	ownedBehavior	Payload Sensor States-node_1934
+mass-node_437	redefinedProperty	mass-node_164
+Mission Enterprise-node_4656	is	Block
+mass-node_1957	definingFeature	uml:Slot-node_6295
+uml:Slot-node_5853	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Payload Sensor Data-node_5355	type	uml:OutputPin-node_2129
+Signal Processor-node_2071	is	Block
+uml:ControlFlow-node_2114	is	uml:ControlFlow
+uml:InputPin-node_2127	target	uml:ObjectFlow-node_2102
+argument-node_1917	parameter	argument-node_1915
+uml:ObjectFlow-node_2102	target	uml:InputPin-node_2127
+uml:CallBehaviorAction-node_2138	result	uml:OutputPin-node_2140
+Spacecraft-Physical-node_426	is	Block
+uml:Slot-node_5851	is	uml:Slot
+uml:Slot-node_6301	definingFeature	sensitivity-node_1963
+result-node_2164	node	Control Unit-Under-Test-node_2162
+uml:CallBehaviorAction-node_2141	is	uml:CallBehaviorAction
+Signal Processor-node_1869	Allocate	Process Signal-node_1914
+Analysis Context-node_2979	ownedAttribute	ConstraintProperty-node_2989
+NestedConnectorEnd-node_1852	is	NestedConnectorEnd
+Test Operator-node_2832	is	Block
+AllocateActivityPartition-node_2120	edge	uml:ControlFlow-node_2114
+uml:Connector-node_2078	is	uml:Connector
+量化饱和电压多光谱-node_2008	definingFeature	uml:Slot-node_6335
+uml:ObjectFlow-node_2102	edge	Verify Sensor Resolution-node_2099
+uml:ActivityParameterNode-node_1948	is	uml:ActivityParameterNode
+uml:Region-node_1935	transition	uml:Transition-node_1952
+uml:OutputPin-node_2137	result	uml:CallBehaviorAction-node_2135
+uml:Slot-node_5768	definingFeature	PartProperty-node_1822
+Payload Sensor Data-node_5355	type	uml:InputPin-node_2531
+AllocateActivityPartition-node_2121	partition	Verify Sensor Resolution-node_2099
+data rate-node_1960	is	ValueProperty
+AllocateActivityPartition-node_2120	node	uml:InitialNode-node_2147
+CCD_MSMTF-node_1974	is	ValueProperty
+result-node_2159	is	uml:Parameter
+NestedConnectorEnd-node_2080	partWithPort	system-under-test-node_2073
+Verify Mass-node_2842	ownedParameter	verdict-node_2843
+Camera-node_1927	ownedAttribute	量化位数-node_1986
+NestedConnectorEnd-node_1831	end	uml:Connector-node_1830
+uml:InitialNode-node_2147	source	uml:ControlFlow-node_2116
+uml:Slot-node_6291	is	uml:Slot
+uml:Slot-node_5819	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Analysis Context-node_2979	ownedConnector	BindingConnector-node_3224
+Thermal Imagery-node_5356	is	Block
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	is	uml:InstanceSpecification
+result-node_1918	parameter	result-node_1916
+CCD输出电压Vccd多光谱低端-node_1994	is	ValueProperty
+Verify Sensor Sensitivity-node_2148	is	TestCase
+Scale-node_2841	represents	AllocateActivityPartition-node_2844
+verdict-node_2843	ownedParameter	Verify Mass-node_2842
+uml:Parameter-node_1943	is	uml:Parameter
+Payload Subsystem-node_1770	ownedAttribute	PartProperty-node_1822
+AllocateActivityPartition-node_2524	is	AllocateActivityPartition
+uml:Slot-node_5843	is	uml:Slot
+uml:Slot-node_5827	is	uml:Slot
+uml:Slot-node_5823	is	uml:Slot
+AllocateActivityPartition-node_2120	inPartition	uml:ControlFlow-node_2116
+AllocateActivityPartition-node_2124	group	Verify Sensor Resolution-node_2099
+Signal Processor-node_1869	is	Block
+PartProperty-node_1822	propertyPath	NestedConnectorEnd-node_1841
+result-node_2163	is	uml:Parameter
+电路噪声VN2-node_2000	definingFeature	uml:Slot-node_6329
+uml:InitialNode-node_2147	inPartition	AllocateActivityPartition-node_2120
+field of view-node_2053	type	milliradian-node_5531
+spectrum-node_1968	definingFeature	uml:Slot-node_5853
+uml:Slot-node_5853	is	uml:Slot
+AllocateActivityPartition-node_2523	node	uml:CallBehaviorAction-node_2530
+field of view-node_1961	definingFeature	uml:Slot-node_6291
+Display Imagery-node_2157	is	uml:Activity
+CCD_MSMTF-node_1974	definingFeature	uml:Slot-node_5819
+uml:Region-node_1935	subvertex	off-node_1937
+uml:Slot-node_5847	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Verify Sensor Resolution-node_2099	partition	AllocateActivityPartition-node_2125
+uml:Slot-node_6291	definingFeature	field of view-node_1961
+OBDH_mass-node_1315	is	ValueProperty
+uml:CallBehaviorAction-node_2526	behavior	Sense Thermal Emissions-node_1942
+uml:CallBehaviorAction-node_2126	behavior	Sense Thermal Emissions-node_1942
+Payload Sensor States-node_1934	is	uml:StateMachine
+sensor data i/f-node_1956	role	NestedConnectorEnd-node_1831
+argument-node_1917	is	uml:ActivityParameterNode
+光学系统全色MTF-node_2014	is	ValueProperty
+uml:OutputPin-node_2134	is	uml:OutputPin
+uml:Slot-node_6329	is	uml:Slot
+Camera-node_1927	classifier	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+OBDH Subsystem-node_1298	ownedAttribute	OBDH_mass-node_1315
+uml:Parameter-node_1945	is	uml:Parameter
+mass-node_164	Refine	Mass 卫星-node_333
+NestedConnectorEnd-node_1852	partWithPort	PartProperty-node_1822
+size-node_2044	is	ValueProperty
+Verify Mass-node_2842	partition	AllocateActivityPartition-node_2844
+uml:Slot-node_6293	is	uml:Slot
+uml:InputPin-node_2127	argument	uml:CallBehaviorAction-node_2126
+uml:CallBehaviorAction-node_2135	argument	uml:InputPin-node_2136
+Verify Sensor Resolution-node_2099	Verify	MTF-node_2213
+argument-node_1915	parameter	argument-node_1917
+Payload Subsystem-node_1770	Allocate	Sense Thermal Emissions-node_1942
+单片CCD全色像元数-node_1980	is	ValueProperty
+uml:Slot-node_6287	is	uml:Slot
+TTC Subsystem-node_2396	is	Block
+ConstraintProperty-node_2989	propertyPath	NestedConnectorEnd-node_3103
+Verify Sensor Resolution-node_2099	method	verify sensor resolution-node_2090
+Display-node_2092	is	Block
+Spacecraft-Physical-node_426	represents	AllocateActivityPartition-node_2845
+uml:Connector-node_2078	end	NestedConnectorEnd-node_2080
+CCD_MSMTF-node_1974	definingFeature	uml:Slot-node_6271
+uml:Slot-node_5869	is	uml:Slot
+AOCS_Mass-node_1546	is	ValueProperty
+uml:Slot-node_6335	is	uml:Slot
+uml:Slot-node_6333	is	uml:Slot
+Payload Subsystem-node_1770	Allocate	Process Signal-node_1914
+uml:CallBehaviorAction-node_2143	argument	uml:InputPin-node_2144
+uml:CallBehaviorAction-node_2138	argument	uml:InputPin-node_2139
+SMS_mass-node_1721	is	ValueProperty
+uml:CallBehaviorAction-node_2133	node	Verify Sensor Resolution-node_2099
+uml:Slot-node_6313	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+Camera-node_1927	ownedAttribute	sensitivity-node_1963
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2138
+AllocateActivityPartition-node_2846	partition	Verify Mass-node_2842
+uml:Slot-node_6297	is	uml:Slot
+result-node_2161	node	Display Imagery-node_2157
+uml:Slot-node_6301	is	uml:Slot
+Observation Data-node_5316	is	Block
+RF-node_5345	is	Block
+Spacecraft-Physical-node_426	ownedAttribute	mass-node_437
+uml:Connector-node_1830	realizingConnector	flow for Payload Sensor Data-node_1880
+Verify Mass-node_2842	partition	AllocateActivityPartition-node_2845
+power-node_1958	is	ValueProperty
+uml:InputPin-node_2139	argument	uml:CallBehaviorAction-node_2138
+size-node_1959	type	Shape-node_5533
+AllocateActivityPartition-node_2123	inPartition	uml:CallBehaviorAction-node_2126
+AllocateActivityPartition-node_2122	inPartition	uml:CallBehaviorAction-node_2126
+AllocateActivityPartition-node_2125	partition	Verify Sensor Resolution-node_2099
+AllocateActivityPartition-node_2844	partition	Verify Mass-node_2842
+lifetime-node_2056	is	ValueProperty
+uml:Slot-node_5833	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Verify Sensor Resolution-node_2099	edge	uml:ControlFlow-node_2112
+Payload_mass-node_1792	Allocate	mass-node_164
+Camera-node_1927	type	PartProperty-node_1822
+CCD输出电压Vccd全色低端-node_1988	definingFeature	uml:Slot-node_5827
+PartProperty-node_1822	redefinedProperty	unit-under-test-node_1780
+thermal-node_2132	is	uml:OutputPin
+field of view-node_2053	redefinedProperty	field of view-node_1961
+sense thermal emissions-node_2020	Satisfy	MTF-node_2213
+field of view-node_1961	Refine	Field of View-node_2214
+uml:Slot-node_6327	is	uml:Slot
+NestedConnectorEnd-node_1831	role	sensor data i/f-node_1956
+sensor data if-node_1871	is	uml:Port
+Test Operator-node_2832	Allocate	Assess Pass/Fail-node_2168
+uml:Transition-node_1950	transition	uml:Region-node_1935
+verdict-node_2843	parameter	verdict-node_2847
+Camera-node_1927	ownedAttribute	单片CCD全色像元数-node_1980
+uml:ControlFlow-node_2116	source	uml:InitialNode-node_2147
+uml:Slot-node_5881	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+size-node_1959	redefinedProperty	size-node_2044
+PartProperty-node_1822	partWithPort	NestedConnectorEnd-node_1841
+器件噪声VN1全色-node_1996	definingFeature	uml:Slot-node_5863
+AllocateActivityPartition-node_2520	is	AllocateActivityPartition
+lifetime-node_1964	definingFeature	uml:Slot-node_6293
+PartProperty-node_1822	partWithPort	NestedConnectorEnd-node_1826
+Sensor CMD-node_5354	type	uml:ActivityParameterNode-node_1946
+uml:InputPin-node_2144	is	uml:InputPin
+data rate-node_1960	redefinedProperty	data rate-node_2046
+Verify Mass-node_2842	group	AllocateActivityPartition-node_2846
+AOCS Subsystem-node_1512	ownedAttribute	AOCS_Mass-node_1546
+AOCS_Mass-node_1546	type	kilogram-node_1635
+uml:Slot-node_6303	is	uml:Slot
+AllocateActivityPartition-node_2120	edge	uml:ControlFlow-node_2118
+uml:Connector-node_1830	is	uml:Connector
+CCD输出电压Vccd多光谱高端-node_1992	definingFeature	uml:Slot-node_6285
+PartProperty-node_1822	propertyPath	NestedConnectorEnd-node_1852
+uml:Slot-node_5855	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+AllocateActivityPartition-node_2121	group	Verify Sensor Resolution-node_2099
+uml:Slot-node_6321	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+Data Rate-node_2215	is	Requirement
+lifetime-node_1964	Refine	Reliability-node_2205
+lifetime-node_2056	redefinedProperty	lifetime-node_1964
+uml:CallBehaviorAction-node_2530	behavior	Process Signal-node_1914
+resolution-node_2050	is	ValueProperty
+Payload Sensor Data-node_5355	conveyed	flow for Payload Sensor Data-node_1880
+uml:ActivityFinalNode-node_2146	inPartition	AllocateActivityPartition-node_2120
+uml:InputPin-node_2127	is	uml:InputPin
+sensitivity-node_2052	Satisfy	MTF-node_2213
+TCS_mass-node_1403	is	ValueProperty
+verify mass-node_2839	specification	Verify Mass-node_2842
+mass-node_1957	Refine	Mass-node_2209
+uml:CallBehaviorAction-node_2143	node	Verify Sensor Resolution-node_2099
+Payload Subsystem-node_1770	ownedAttribute	PartProperty-node_1772
+uml:CallBehaviorAction-node_2126	inPartition	AllocateActivityPartition-node_2122
+Observation Data-node_5316	type	uml:OutputPin-node_2140
+Measure Resolution-node_2165	is	uml:Activity
+NestedConnectorEnd-node_1832	end	uml:Connector-node_1830
+uml:Slot-node_6295	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+AllocateActivityPartition-node_2125	inPartition	uml:CallBehaviorAction-node_2135
+Mid-Range IR Scanner-node_2038	ownedAttribute	field of view-node_2053
+Sense Thermal Emissions-node_1942	ownedParameter	uml:Parameter-node_1944
+uml:InputPin-node_2131	is	uml:InputPin
+uml:Connector-node_1851	end	NestedConnectorEnd-node_1852
+Test Operator-node_2832	represents	AllocateActivityPartition-node_2846
+uml:Slot-node_5857	is	uml:Slot
+uml:Slot-node_6307	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:Slot-node_6275	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:CallBehaviorAction-node_2138	is	uml:CallBehaviorAction
+uml:Slot-node_6303	definingFeature	size-node_1959
+uml:Slot-node_6307	is	uml:Slot
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6299
+field of view-node_1961	redefinedProperty	field of view-node_2053
+uml:Slot-node_6311	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+AllocateActivityPartition-node_2120	is	AllocateActivityPartition
+uml:ActivityParameterNode-node_1947	is	uml:ActivityParameterNode
+uml:Slot-node_5833	is	uml:Slot
+uml:Slot-node_5821	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+AllocateActivityPartition-node_2525	is	AllocateActivityPartition
+uml:CallBehaviorAction-node_2130	argument	uml:InputPin-node_2131
+uml:Slot-node_6295	is	uml:Slot
+Verify Sensor Resolution-node_2099	group	AllocateActivityPartition-node_2121
+量化位数-node_1986	definingFeature	uml:Slot-node_6331
+Thermal Imagery-node_5356	type	result-node_2159
+Sense Thermal Emissions-node_1942	node	uml:ActivityParameterNode-node_1947
+Camera-node_1927	ownedAttribute	mass-node_1957
+uml:Slot-node_5875	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+data rate-node_1960	definingFeature	uml:Slot-node_5837
+量化饱和电压全色-node_2006	definingFeature	uml:Slot-node_6333
+uml:CallBehaviorAction-node_2126	inPartition	AllocateActivityPartition-node_2123
+argument-node_2167	is	uml:ActivityParameterNode
+Mid-Range IR Scanner-node_2038	ownedAttribute	lifetime-node_2056
+AllocateActivityPartition-node_2122	is	AllocateActivityPartition
+SpecWidthErr-node_1970	is	ValueProperty
+CCD输出电压Vccd全色高端-node_1990	definingFeature	uml:Slot-node_5829
+Camera-node_1927	ownedAttribute	电路噪声VN2-node_2000
+off-node_1937	target	uml:Transition-node_1952
+ConstraintProperty-node_2989	partWithPort	NestedConnectorEnd-node_3103
+uml:CallBehaviorAction-node_2138	inPartition	AllocateActivityPartition-node_2124
+Verify Mass-node_2842	partition	AllocateActivityPartition-node_2846
+Mid-Range IR Scanner-node_2038	ownedAttribute	resolution-node_2050
+AllocateActivityPartition-node_2120	node	uml:CallBehaviorAction-node_2143
+uml:ControlFlow-node_2112	target	uml:CallBehaviorAction-node_2145
+uml:CallBehaviorAction-node_2143	node	AllocateActivityPartition-node_2120
+observation sensor i/f-node_172	role	NestedConnectorEnd-node_2080
+uml:CallBehaviorAction-node_2126	argument	uml:InputPin-node_2128
+CCD数量-node_1982	definingFeature	uml:Slot-node_6277
+uml:Slot-node_5845	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+result-node_1918	node	Process Signal-node_1914
+uml:Slot-node_5831	is	uml:Slot
+Payload Sensor Data-node_5355	type	argument-node_1915
+Observation Data-node_5316	type	argument-node_2160
+Camera-node_1927	ownedAttribute	p2-node_1967
+CCD输出电压Vccd多光谱高端-node_1992	is	ValueProperty
+Mid-Range IR Scanner-node_2038	ownedAttribute	size-node_2044
+uml:CallBehaviorAction-node_2141	result	uml:OutputPin-node_2142
+result-node_1916	ownedParameter	Process Signal-node_1914
+uml:InputPin-node_2139	target	uml:ObjectFlow-node_2104
+Sense Thermal Emissions-node_1942	behavior	uml:CallBehaviorAction-node_2126
+uml:Slot-node_6323	is	uml:Slot
+uml:Slot-node_5837	is	uml:Slot
+Camera-node_1927	represents	AllocateActivityPartition-node_2521
+unit-under-test-node_1780	is	ReferenceProperty
+resolution-node_2050	Satisfy	MTF-node_2213
+Observation Data-node_5316	type	result-node_1916
+uml:Slot-node_6295	definingFeature	mass-node_1957
+电荷输出转换效率CCE全色-node_2002	definingFeature	uml:Slot-node_6325
+电荷输出转换效率CCE多光谱-node_2004	is	ValueProperty
+AllocateActivityPartition-node_2122	group	Verify Sensor Resolution-node_2099
+uml:CallBehaviorAction-node_2126	result	uml:OutputPin-node_2129
+sensitivity-node_1963	is	ValueProperty
+Camera-node_1927	ownedAttribute	CCD数量-node_1982
+uml:Slot-node_6311	is	uml:Slot
+Payload Subsystem-node_1770	ownedConnector	uml:Connector-node_1839
+Camera-node_1927	ownedAttribute	resolution-node_1962
+observation sensor i/f-node_172	is	uml:Port
+Payload Subsystem-node_1770	ownedConnector	uml:Connector-node_1830
+NestedConnectorEnd-node_1841	partWithPort	PartProperty-node_1822
+field of view-node_2053	is	ValueProperty
+Verify Mass-node_2842	is	TestCase
+mass-node_437	is	tpm
+Analysis Context-node_2979	is	Block
+DTS Subsystem-node_1126	ownedAttribute	DTS_mass-node_1163
+Camera-node_1927	ownedAttribute	镜头装调因子K-node_2018
+uml:ControlFlow-node_2118	edge	AllocateActivityPartition-node_2120
+Analysis Context-node_2979	ownedConnector	BindingConnector-node_3101
+uml:Slot-node_6275	is	uml:Slot
+uml:CallBehaviorAction-node_2135	node	Verify Sensor Resolution-node_2099
+AllocateActivityPartition-node_2523	inPartition	uml:CallBehaviorAction-node_2530
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2133
+uml:Transition-node_1950	target	on-node_1941
+NestedConnectorEnd-node_1841	is	NestedConnectorEnd
+uml:CallBehaviorAction-node_2126	node	AllocateActivityPartition-node_2122
+milliradian-node_5531	type	field of view-node_2053
+uml:CallBehaviorAction-node_2141	node	Verify Sensor Resolution-node_2099
+uml:Slot-node_6313	is	uml:Slot
+size-node_1959	is	ValueProperty
+Camera-node_1927	ownedAttribute	电荷输出转换效率CCE全色-node_2002
+OBDH Subsystem-node_1298	is	Block
+器件噪声VN1多光谱-node_1998	definingFeature	uml:Slot-node_5865
+AllocateActivityPartition-node_2120	node	uml:CallBehaviorAction-node_2145
+uml:CallBehaviorAction-node_2133	node	AllocateActivityPartition-node_2120
+镜头装调因子K-node_2018	definingFeature	uml:Slot-node_6337
+器件噪声VN1全色-node_1996	definingFeature	uml:Slot-node_6315
+verify mass-node_2839	method	Verify Mass-node_2842
+uml:CallBehaviorAction-node_2530	is	uml:CallBehaviorAction
+lifetime-node_1964	definingFeature	uml:Slot-node_5841
+uml:ControlFlow-node_2114	target	uml:ActivityFinalNode-node_2146
+NestedConnectorEnd-node_3225	role	Sat Mass卫星重量-node_4668
+Power-node_2211	is	Requirement
+uml:Slot-node_6299	definingFeature	resolution-node_1962
+uml:Slot-node_6317	is	uml:Slot
+Sense Thermal Emissions-node_1942	is	uml:Activity
+camera Parameters Analysis.payload Subsystem-node_5767	slot	uml:Slot-node_5768
+ConstraintProperty-node_2989	is	ConstraintProperty
+量化位数-node_1986	definingFeature	uml:Slot-node_5879
+AllocateActivityPartition-node_2123	subpartition	AllocateActivityPartition-node_2122
+NestedConnectorEnd-node_1831	partWithPort	PartProperty-node_1822
+uml:ControlFlow-node_2114	source	uml:CallBehaviorAction-node_2145
+uml:Slot-node_5877	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:Slot-node_6319	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+power-node_2042	is	ValueProperty
+Verify Sensor Resolution-node_2099	partition	AllocateActivityPartition-node_2122
+uml:InputPin-node_2527	is	uml:InputPin
+Spacecraft-node_23	ownedAttribute	observation sensor i/f-node_172
+Verification Context-Sensor Performance-node_2072	is	Block
+uml:CallBehaviorAction-node_2126	argument	uml:InputPin-node_2127
+Camera-node_1927	ownedAttribute	spectrum-node_1968
+power-node_1958	redefinedProperty	power-node_2042
+Assess Pass/Fail-node_2168	behavior	uml:CallBehaviorAction-node_2145
+器件噪声VN1多光谱-node_1998	is	ValueProperty
+Analysis Context-node_2979	ownedConnector	BindingConnector-node_3188
+Thermal Imagery-node_5356	type	uml:OutputPin-node_2137
+result-node_2163	ownedParameter	Control Unit-Under-Test-node_2162
+Camera-node_1927	ownedAttribute	器件噪声VN1多光谱-node_1998
+mass-node_1957	definingFeature	uml:Slot-node_5843
+Harness Subsystem-node_1463	is	Block
+field of view-node_1961	type	milliradian-node_5531
+p2-node_1967	role	NestedConnectorEnd-node_1852
+NestedConnectorEnd-node_1826	partWithPort	PartProperty-node_1822
+Verify Sensor Resolution-node_2099	group	AllocateActivityPartition-node_2120
+AllocateActivityPartition-node_2120	group	Verify Sensor Resolution-node_2099
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2145
+uml:ObjectFlow-node_2102	is	uml:ObjectFlow
+uml:CallBehaviorAction-node_2141	target	uml:ControlFlow-node_2116
+size-node_1959	definingFeature	uml:Slot-node_6303
+result-node_1918	is	uml:ActivityParameterNode
+全色像元尺寸-node_1976	definingFeature	uml:Slot-node_6311
+uml:Slot-node_6299	is	uml:Slot
+Control Thermal Source-node_2154	behavior	uml:CallBehaviorAction-node_2133
+Control Unit-Under-Test-node_2162	behavior	uml:CallBehaviorAction-node_2141
+uml:ObjectFlow-node_2108	is	uml:ObjectFlow
+光学系统多光谱MTF-node_2016	definingFeature	uml:Slot-node_5857
+Spacecraft-node_23	is	Block
+Mid-Range IR Scanner-node_2038	ownedAttribute	mass-node_2040
+uml:ObjectFlow-node_2104	target	uml:InputPin-node_2139
+uml:OutputPin-node_2529	result	uml:CallBehaviorAction-node_2526
+uml:ControlFlow-node_2116	target	uml:CallBehaviorAction-node_2141
+Data rate-node_1139	type	mbps-node_5529
+uml:Slot-node_6297	definingFeature	power-node_1958
+uml:CallBehaviorAction-node_2145	source	uml:ControlFlow-node_2114
+uml:CallBehaviorAction-node_2135	node	AllocateActivityPartition-node_2125
+镜头装调因子K-node_2018	definingFeature	uml:Slot-node_5885
+Camera-node_1927	ownedAttribute	焦距-node_2010
+uml:Slot-node_6273	is	uml:Slot
+PartProperty-node_1822	propertyPath	NestedConnectorEnd-node_1831
+Test Operator-node_2832	represents	AllocateActivityPartition-node_2120
+AllocateActivityPartition-node_2846	is	AllocateActivityPartition
+uml:Slot-node_6301	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+CCD_PANMTF-node_1972	definingFeature	uml:Slot-node_6273
+power-node_1930	is	uml:Constraint
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2141
+uml:Slot-node_6291	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+sensor data i/f-node_1956	Refine	Electrical Interface-node_2224
+Harness_mass-node_1468	type	kilogram-node_1635
+Camera-node_1927	ownedAttribute	全色像元尺寸-node_1976
+milliradian-node_5531	is	ValueType
+Verify Sensor Resolution-node_2099	edge	uml:ControlFlow-node_2114
+uml:CallBehaviorAction-node_2135	inPartition	AllocateActivityPartition-node_2125
+result-node_2161	parameter	result-node_2159
+AllocateActivityPartition-node_2120	edge	uml:ControlFlow-node_2112
+PartProperty-node_1772	partWithPort	NestedConnectorEnd-node_1832
+uml:Slot-node_6335	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:Slot-node_6333	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:Slot-node_5863	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Verify Sensor Resolution-node_2099	node	uml:ActivityFinalNode-node_2146
+SpecWidthErr-node_1970	definingFeature	uml:Slot-node_5835
+size-node_2044	redefinedProperty	size-node_1959
+uml:Slot-node_6317	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+argument-node_2160	parameter	argument-node_2158
+uml:Slot-node_5843	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+AllocateActivityPartition-node_2120	node	uml:ActivityFinalNode-node_2146
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem-node_6194	slot	uml:Slot-node_6209
+BindingConnector-node_3101	is	BindingConnector
+Sensor CMD-node_5354	type	uml:InputPin-node_2527
+器件噪声VN1多光谱-node_1998	definingFeature	uml:Slot-node_6317
+uml:OutputPin-node_2532	result	uml:CallBehaviorAction-node_2530
+uml:Slot-node_5847	is	uml:Slot
+uml:Parameter-node_1943	parameter	uml:ActivityParameterNode-node_1946
+uml:Connector-node_1824	end	NestedConnectorEnd-node_1826
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5843
+milliradian-node_5531	type	resolution-node_1962
+data rate-node_2046	is	ValueProperty
+NestedConnectorEnd-node_2080	is	NestedConnectorEnd
+observation data-node_2502	ownedParameter	Collect and Downlnk Observation Data-p-node_2501
+PartProperty-node_1822	propertyPath	NestedConnectorEnd-node_1826
+MTF-node_2213	is	Requirement
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2130
+uml:Slot-node_6309	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+mbps-node_5529	type	data rate-node_1960
+AllocateActivityPartition-node_2125	is	AllocateActivityPartition
+resolution-node_1962	type	milliradian-node_5531
+Sense Thermal Emissions-node_1942	ownedParameter	uml:Parameter-node_1943
+uml:ControlFlow-node_2112	source	uml:CallBehaviorAction-node_2143
+电路噪声VN2-node_2000	definingFeature	uml:Slot-node_5877
+uml:ActivityParameterNode-node_1948	node	Sense Thermal Emissions-node_1942
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5847
+AllocateActivityPartition-node_2520	partition	Collect and Downlnk Observation Data-p-node_2501
+mass-node_164	is	mop
+Observation Data-node_5316	type	uml:OutputPin-node_2532
+电荷输出转换效率CCE多光谱-node_2004	definingFeature	uml:Slot-node_6327
+uml:Slot-node_5839	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:ActivityParameterNode-node_1947	node	Sense Thermal Emissions-node_1942
+Observation Data-node_5316	type	result-node_1918
+data rate-node_1960	definingFeature	uml:Slot-node_6289
+uml:ObjectFlow-node_2108	target	uml:InputPin-node_2144
+spectrum-node_1968	definingFeature	uml:Slot-node_6305
+CCD_PANMTF-node_1972	is	ValueProperty
+uml:ObjectFlow-node_2110	edge	Verify Sensor Resolution-node_2099
+Camera-node_1927	ownedAttribute	CCD输出电压Vccd全色低端-node_1988
+uml:Slot-node_5859	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Display Imagery-node_2157	behavior	uml:CallBehaviorAction-node_2135
+uml:Region-node_1935	subvertex	on-node_1941
+uml:CallBehaviorAction-node_2145	inPartition	AllocateActivityPartition-node_2120
+Verify Sensor Resolution-node_2099	edge	uml:ControlFlow-node_2118
+uml:ActivityFinalNode-node_2146	node	AllocateActivityPartition-node_2120
+flow for Payload Sensor Data-node_1880	realizingConnector	uml:Connector-node_1830
+CCD输出电压Vccd多光谱高端-node_1992	definingFeature	uml:Slot-node_5833
+uml:OutputPin-node_2140	source	uml:ObjectFlow-node_2106
+uml:Slot-node_5849	is	uml:Slot
+uml:Slot-node_6271	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+Generate Thermal Emission-node_2149	is	uml:Activity
+field of view-node_2053	Satisfy	Field of View-node_2214
+uml:Slot-node_6271	is	uml:Slot
+PartProperty-node_1822	is	PartProperty
+uml:Slot-node_6283	is	uml:Slot
+uml:Slot-node_6209	is	uml:Slot
+uml:ActivityParameterNode-node_1948	parameter	uml:Parameter-node_1945
+field of view-node_1961	redefinedProperty	field of view-node_1961
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	slot	uml:Slot-node_5837
+Test Operator-node_2832	Allocate	Control Thermal Source-node_2154
+uml:Slot-node_5839	definingFeature	field of view-node_1961
+RF-node_5345	type	observation data-node_2545
+verify mass-node_2839	is	TestCase
+uml:CallBehaviorAction-node_2145	node	Verify Sensor Resolution-node_2099
+Camera-node_1927	ownedAttribute	电荷输出转换效率CCE多光谱-node_2004
+uml:Connector-node_1824	is	uml:Connector
+uml:ActivityFinalNode-node_2146	is	uml:ActivityFinalNode
+Payload Sensor States-node_1934	region	uml:Region-node_1935
+BindingConnector-node_3188	is	BindingConnector
+argument-node_1915	is	uml:Parameter
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6291
+uml:Slot-node_5851	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Signal Processor-node_1869	type	PartProperty-node_1772
+argument-node_2160	node	Display Imagery-node_2157
+uml:CallBehaviorAction-node_2145	target	uml:ControlFlow-node_2112
+Mid-Range IR Scanner-node_2038	ownedAttribute	sensitivity-node_2052
+uml:Slot-node_6327	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+observation data-node_2502	is	uml:Parameter
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6303
+uml:CallBehaviorAction-node_2130	result	thermal-node_2132
+Scale-node_2841	is	Block
+Camera-node_1927	ownedAttribute	size-node_1959
+uml:Slot-node_6281	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+焦距-node_2010	definingFeature	uml:Slot-node_5869
+多光谱像元尺寸-node_1978	is	ValueProperty
+uml:Parameter-node_1945	parameter	uml:ActivityParameterNode-node_1948
+uml:InputPin-node_2136	target	uml:ObjectFlow-node_2106
+DTS_mass-node_1163	type	kilogram-node_1635
+电子学系统MTF-node_2012	is	ValueProperty
+单片CCD全色像元数-node_1980	definingFeature	uml:Slot-node_6313
+TCS_mass-node_1403	type	kilogram-node_1635
+Camera-node_1927	is	Block
+Camera-node_1927	ownedAttribute	CCD输出电压Vccd多光谱高端-node_1992
+量化饱和电压多光谱-node_2008	definingFeature	uml:Slot-node_5883
+AllocateActivityPartition-node_2121	node	uml:CallBehaviorAction-node_2130
+uml:OutputPin-node_2142	source	uml:ObjectFlow-node_2102
+uml:Connector-node_1851	is	uml:Connector
+Spacecraft-Physical-node_426	Allocate	Sense Thermal Emissions-node_1942
+uml:Slot-node_6309	is	uml:Slot
+AllocateActivityPartition-node_2120	inPartition	uml:ControlFlow-node_2112
+Optical Bench-node_2070	is	Block
+argument-node_2166	ownedParameter	Measure Resolution-node_2165
+Sensor CMD-node_5354	type	result-node_2164
+sense thermal emissions-node_2020	Refine	MTF-node_2213
+Harness Subsystem-node_1463	ownedAttribute	Harness_mass-node_1468
+Observation Data-node_5316	type	argument-node_2158
+kilogram-node_1635	type	Payload_mass-node_1792
+uml:CallBehaviorAction-node_2143	inPartition	AllocateActivityPartition-node_2120
+uml:OutputPin-node_2129	result	uml:CallBehaviorAction-node_2126
+AllocateActivityPartition-node_2520	subpartition	AllocateActivityPartition-node_2521
+Verify Sensor Resolution-node_2099	specification	verify sensor resolution-node_2090
+Payload_mass-node_1792	is	tpm
+Test Operator-node_2832	Allocate	Measure Resolution-node_2165
+result-node_1916	parameter	result-node_1918
+observation sensor i/f-node_1955	is	uml:Port
+CCD_PANMTF-node_1972	definingFeature	uml:Slot-node_5821
+uml:Slot-node_5835	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Thermal Imagery-node_5356	type	argument-node_2166
+uml:Slot-node_5871	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+uml:InputPin-node_2136	argument	uml:CallBehaviorAction-node_2135
+Payload SW-node_1769	represents	AllocateActivityPartition-node_2522
+CCD数量-node_1982	is	ValueProperty
+field of view-node_1961	is	ValueProperty
+size-node_2044	Satisfy	Size-node_2210
+uml:Slot-node_6325	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:Slot-node_6321	is	uml:Slot
+DTS Subsystem-node_1126	is	Block
+Size-node_2210	is	Requirement
+lifetime-node_1964	is	ValueProperty
+电荷输出转换效率CCE全色-node_2002	is	ValueProperty
+Collect and Downlnk Observation Data-p-node_2501	node	uml:CallBehaviorAction-node_2526
+uml:Slot-node_6319	is	uml:Slot
+uml:Slot-node_5885	is	uml:Slot
+AOCS Subsystem-node_1512	is	Block
+uml:InputPin-node_2139	is	uml:InputPin
+Mid-Range IR Scanner-node_2038	type	unit-under-test-node_1780
+NestedConnectorEnd-node_1841	propertyPath	PartProperty-node_1822
+resolution-node_1962	definingFeature	uml:Slot-node_6299
+uml:Slot-node_5881	is	uml:Slot
+焦距-node_2010	definingFeature	uml:Slot-node_6321
+uml:ControlFlow-node_2112	is	uml:ControlFlow
+argument-node_2167	parameter	argument-node_2166
+uml:Transition-node_1950	is	uml:Transition
+uml:Slot-node_6283	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+CCD拼接片间重合像元数-node_1984	definingFeature	uml:Slot-node_5823
+size-node_2044	type	Shape-node_5533
+power-node_1958	Refine	Power-node_2211
+on-node_1941	is	uml:State
+Verify Sensor Resolution-node_2099	node	uml:CallBehaviorAction-node_2135
+Mid-Range IR Scanner-node_2038	Allocate	Sense Thermal Emissions-node_1942
+Spacecraft-node_23	ownedAttribute	mass-node_164
+camera Parameters Analysis.payload Subsystem.partProperty-node_5818	is	uml:InstanceSpecification
+Mission Enterprise-node_4656	ownedAttribute	Sat Mass卫星重量-node_4668
+AllocateActivityPartition-node_2520	inPartition	uml:CallBehaviorAction-node_2530
+flow for Payload Sensor Data-node_1880	informationSource	sensor data i/f-node_1956
+DTS Subsystem-node_1126	represents	AllocateActivityPartition-node_2524
+uml:Slot-node_5879	slot	camera Parameters Analysis.payload Subsystem.partProperty-node_5818
+Verify Sensor Resolution-node_2099	partition	AllocateActivityPartition-node_2120
+Measure Resolution-node_2165	behavior	uml:CallBehaviorAction-node_2143
+Payload Subsystem-node_1770	classifier	camera Parameters Analysis.payload Subsystem-node_5767
+uml:InputPin-node_2128	target	uml:ObjectFlow-node_2110
+uml:Slot-node_5863	is	uml:Slot
+uml:InputPin-node_2131	target	uml:ObjectFlow-node_2100
+AllocateActivityPartition-node_2122	subpartition	AllocateActivityPartition-node_2123
+uml:Slot-node_6337	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+uml:Slot-node_6315	slot	analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270
+Verification Context-Sensor Performance-node_2072	ownedOperation	verify sensor sensitivity-node_2091
+全色像元尺寸-node_1976	definingFeature	uml:Slot-node_5859
+uml:Slot-node_5843	definingFeature	mass-node_1957
+analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7-node_6270	slot	uml:Slot-node_6293
+Verify Sensor Resolution-node_2099	group	AllocateActivityPartition-node_2124

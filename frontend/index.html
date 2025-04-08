@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>SysML 知识图谱展示系统</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SysML 知识图谱展示系统</h1>
+</header>
+
+<div class="top-toolbar">
+  <div class="dropdown">
+    <button>节点类型筛选 ⬇</button>
+    <div class="dropdown-content" id="nodeTypeDropdown">
+      <input type="text" id="nodeSearch" placeholder="搜索节点类型" onkeyup="filterDropdown('nodeSearch', 'nodeTypeFilters')">
+      <div class="button-group">
+        <button onclick="toggleAllNodeFilters(true)">全选</button>
+        <button onclick="toggleAllNodeFilters(false)">全不选</button>
+      </div>
+      <div id="nodeTypeFilters"></div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button>关系类型筛选 ⬇</button>
+    <div class="dropdown-content" id="edgeTypeDropdown">
+      <input type="text" id="edgeSearch" placeholder="搜索关系类型" onkeyup="filterDropdown('edgeSearch', 'edgeTypeFilters')">
+      <div class="button-group">
+        <button onclick="toggleAllEdgeFilters(true)">全选</button>
+        <button onclick="toggleAllEdgeFilters(false)">全不选</button>
+      </div>
+      <div id="edgeTypeFilters"></div>
+    </div>
+  </div>
+
+  <button onclick="applyFilters()">应用筛选</button>
+  <button onclick="fetchGraph()">重置图谱</button>
+  <button onclick="window.location.href='inference.html'">路径推理</button>
+  <button onclick="openImportModal()">导入模型</button>
+</div>
+
+<!-- 路径推理弹窗 -->
+<div id="inferenceModal" class="modal">
+  <h3>路径推理</h3>
+  <label for="startLabel">起始节点标签：</label>
+  <select id="startLabel"></select>
+  <label for="endLabel">结束节点标签：</label>
+  <select id="endLabel"></select>
+  <div class="button-group">
+    <button onclick="submitInference()">确认推理</button>
+    <button onclick="closeInferenceModal()">取消</button>
+  </div>
+</div>
+
+<div id="ruleSelector" class="panel">
+  <h3>推理结果（请选择规则）</h3>
+  <ul id="rulesList"></ul>
+</div>
+
+<div id="relationCreator" class="panel">
+  <h3>创建新的路径关系</h3>
+  <p>已选规则：<span id="currentSwrlRule"></span></p>
+  <label for="newRelationName">新路径名称：</label>
+  <input type="text" id="newRelationName" placeholder="请输入关系名称">
+  <button onclick="createNewRelation()">确认创建</button>
+</div>
+
+  <!-- 导入模型弹窗 -->
+<div id="importModal" class="importModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeImportModal()">&times;</span>
+
+    <h2 class="modal-title">导入SysML模型</h2>
+
+    <form id="importForm" class="upload-form">
+      <input type="file" id="importFile" accept=".xml" class="file-input" />
+      <button type="submit" class="upload-btn">上传模型</button>
+    </form>
+
+    <div id="importResult" class="import-result"></div>
+  </div>
+</div>
+
+</div>
+
+<div class="graph-container" id="graph-container">
+  <svg></svg>
+  <div class="info-panel" id="info-panel"></div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+@prefix oslc_neo: <http://localhost:8080/neo4j/neo4j-vocab#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix van: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# 定义知识图谱的节点类
+oslc_neo:Node a rdfs:Class ;
+    rdfs:label "Knowledge Graph Node" ;
+    rdfs:comment "Represents a node in the knowledge graph." ;
+    rdfs:isDefinedBy oslc_neo: .
+
+# 定义节点的属性（labels、properties和identity）
+oslc_neo:labels a rdf:Property ;
+    rdfs:label "labels" ;
+    rdfs:comment "An array of labels assigned to the node." ;
+    rdfs:domain oslc_neo:Node ;
+    rdfs:range rdf:List ;
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo:properties a rdf:Property ;
+    rdfs:label "Properties" ;
+    rdfs:comment "A dictionary of properties associated with the node." ;
+    rdfs:domain oslc_neo:Node ;
+    rdfs:range rdf:XMLLiteral ;  # 可以使用XMLLiteral来表示结构化字典数据
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo:identity a rdf:Property ;
+    rdfs:label "Identity" ;
+    rdfs:comment "A unique identifier for the node." ;
+    rdfs:domain oslc_neo:Node ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy oslc_neo: .
+
+oslc_neo:elementId a rdf:Property ;
+    rdfs:label "elementId" ;
+    rdfs:comment "A unique elementId for the node." ;
+    rdfs:domain oslc_neo:Node ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy oslc_neo: .
+
+
+# 定义词汇表元数据
+oslc_neo: a owl:Ontology ;
+    rdfs:label "The Neo4j Knowledge Graph Vocabulary" ;
+    terms:description "A vocabulary for describing nodes, relationships, and properties in a knowledge graph represented in Neo4j."^^rdf:XMLLiteral ;
+    terms:issued "2024-11-05"^^xsd:date ;
+    terms:source oslc_neo: ;
+    terms:title "Neo4j Knowledge Graph Vocabulary" ;
+    van:preferredNamespacePrefix "oslc_neo" .

@@ -1,0 +1,422 @@
+1
+Requirement(?individualA) ^ nestedClassifier(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Satisfy(?individualC) ^ client(?individualC, ?individualD) ^ tpm(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Satisfy] Unnamed -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical
+articleRankScore: 1.6647; avg_articleRankScore: 0.3329; pageRankScore: 3.3695; avg_pageRankScore: 0.6739
+
+
+
+2
+Requirement(?individualA) ^ nestedClassifier(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ mop(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [mop|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft
+articleRankScore: 2.6667; avg_articleRankScore: 0.5333; pageRankScore: 5.9425; avg_pageRankScore: 1.1885
+
+
+
+3
+Requirement(?individualA) ^ DerivedFrom(?individualB, ?individualA) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Satisfy(?individualC) ^ client(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+7 0.0660
+[Requirement|uml:Class] Mass 卫星 -> [Requirement|uml:Class] Mass -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.4137; avg_articleRankScore: 0.2827; pageRankScore: 2.3193; avg_pageRankScore: 0.4639
+[Requirement|uml:Class] Structural Integrity -> [Requirement|uml:Class] Size -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2149; avg_articleRankScore: 0.2430; pageRankScore: 1.8725; avg_pageRankScore: 0.3745
+[Requirement|uml:Class] Electrical Power -> [Requirement|uml:Class] Power -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.3241; avg_articleRankScore: 0.2648; pageRankScore: 2.2004; avg_pageRankScore: 0.4401
+[Requirement|uml:Class] GSD -> [Requirement|uml:Class] Field of View -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2062; avg_articleRankScore: 0.2412; pageRankScore: 1.8314; avg_pageRankScore: 0.3663
+[Requirement|uml:Class] MTF -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.5624; avg_articleRankScore: 0.3125; pageRankScore: 2.7749; avg_pageRankScore: 0.5550
+[Requirement|uml:Class] MTF -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.5624; avg_articleRankScore: 0.3125; pageRankScore: 2.7749; avg_pageRankScore: 0.5550
+[Requirement|uml:Class] 卫星可靠度satellite reliability -> [Requirement|uml:Class] Reliability -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2924; avg_articleRankScore: 0.2585; pageRankScore: 2.0226; avg_pageRankScore: 0.4045
+
+
+
+4
+Requirement(?individualA) ^ DerivedFrom(?individualB, ?individualA) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+7 0.0660
+[Requirement|uml:Class] Mass 卫星 -> [Requirement|uml:Class] Mass -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.9194; avg_articleRankScore: 0.3839; pageRankScore: 4.0925; avg_pageRankScore: 0.8185
+[Requirement|uml:Class] Structural Integrity -> [Requirement|uml:Class] Size -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.7110; avg_articleRankScore: 0.3422; pageRankScore: 3.6107; avg_pageRankScore: 0.7221
+[Requirement|uml:Class] Electrical Power -> [Requirement|uml:Class] Power -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8298; avg_articleRankScore: 0.3660; pageRankScore: 3.9737; avg_pageRankScore: 0.7947
+[Requirement|uml:Class] GSD -> [Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8034; avg_articleRankScore: 0.3607; pageRankScore: 3.9677; avg_pageRankScore: 0.7935
+[Requirement|uml:Class] MTF -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Camera
+articleRankScore: 2.0585; avg_articleRankScore: 0.4117; pageRankScore: 4.5131; avg_pageRankScore: 0.9026
+[Requirement|uml:Class] MTF -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Camera
+articleRankScore: 2.0847; avg_articleRankScore: 0.4169; pageRankScore: 4.6533; avg_pageRankScore: 0.9307
+[Requirement|uml:Class] 卫星可靠度satellite reliability -> [Requirement|uml:Class] Reliability -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8147; avg_articleRankScore: 0.3629; pageRankScore: 3.9010; avg_pageRankScore: 0.7802
+
+
+
+5
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ group(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)
+6 0.0566
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator
+articleRankScore: 1.5967; avg_articleRankScore: 0.3193; pageRankScore: 3.1425; avg_pageRankScore: 0.6285
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Scale
+articleRankScore: 1.3324; avg_articleRankScore: 0.2665; pageRankScore: 2.2853; avg_pageRankScore: 0.4571
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Display
+articleRankScore: 1.5038; avg_articleRankScore: 0.3008; pageRankScore: 2.6596; avg_pageRankScore: 0.5319
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Signal Processor
+articleRankScore: 1.4859; avg_articleRankScore: 0.2972; pageRankScore: 2.4942; avg_pageRankScore: 0.4988
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Optical Bench
+articleRankScore: 1.5038; avg_articleRankScore: 0.3008; pageRankScore: 2.6596; avg_pageRankScore: 0.5319
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator
+articleRankScore: 2.1323; avg_articleRankScore: 0.4265; pageRankScore: 4.4883; avg_pageRankScore: 0.8977
+
+
+
+6
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ group(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [system_of_interest|uml:Class|Block] Spacecraft-Physical
+articleRankScore: 1.5920; avg_articleRankScore: 0.3184; pageRankScore: 3.1028; avg_pageRankScore: 0.6206
+
+
+
+7
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ partition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)
+6 0.0566
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator
+articleRankScore: 1.5967; avg_articleRankScore: 0.3193; pageRankScore: 3.1425; avg_pageRankScore: 0.6285
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Scale
+articleRankScore: 1.3324; avg_articleRankScore: 0.2665; pageRankScore: 2.2853; avg_pageRankScore: 0.4571
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Display
+articleRankScore: 1.5038; avg_articleRankScore: 0.3008; pageRankScore: 2.6596; avg_pageRankScore: 0.5319
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Signal Processor
+articleRankScore: 1.4859; avg_articleRankScore: 0.2972; pageRankScore: 2.4942; avg_pageRankScore: 0.4988
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block|test_component] Optical Bench
+articleRankScore: 1.5038; avg_articleRankScore: 0.3008; pageRankScore: 2.6596; avg_pageRankScore: 0.5319
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator
+articleRankScore: 2.1323; avg_articleRankScore: 0.4265; pageRankScore: 4.4883; avg_pageRankScore: 0.8977
+
+
+
+8
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ partition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [system_of_interest|uml:Class|Block] Spacecraft-Physical
+articleRankScore: 1.5920; avg_articleRankScore: 0.3184; pageRankScore: 3.1028; avg_pageRankScore: 0.6206
+
+
+
+9
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ specification(?individualC, ?individualD) ^ TestCase(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)
+3 0.0283
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:Operation|TestCase] verify mass -> [uml:Class|Block] Verification Context-Mass Properties
+articleRankScore: 1.3393; avg_articleRankScore: 0.2679; pageRankScore: 2.2694; avg_pageRankScore: 0.4539
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Sensitivity -> [uml:Operation|TestCase] verify sensor sensitivity -> [uml:Class|Block] Verification Context-Sensor Performance
+articleRankScore: 1.5450; avg_articleRankScore: 0.3090; pageRankScore: 5.5435; avg_pageRankScore: 1.1087
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:Operation|TestCase] verify sensor resolution -> [uml:Class|Block] Verification Context-Sensor Performance
+articleRankScore: 1.4203; avg_articleRankScore: 0.2841; pageRankScore: 2.2770; avg_pageRankScore: 0.4554
+
+
+
+10
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ method(?individualD, ?individualC) ^ TestCase(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)
+3 0.0283
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:Operation|TestCase] verify mass -> [uml:Class|Block] Verification Context-Mass Properties
+articleRankScore: 1.3393; avg_articleRankScore: 0.2679; pageRankScore: 2.2694; avg_pageRankScore: 0.4539
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Sensitivity -> [uml:Operation|TestCase] verify sensor sensitivity -> [uml:Class|Block] Verification Context-Sensor Performance
+articleRankScore: 1.5450; avg_articleRankScore: 0.3090; pageRankScore: 5.5435; avg_pageRankScore: 1.1087
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:Operation|TestCase] verify sensor resolution -> [uml:Class|Block] Verification Context-Sensor Performance
+articleRankScore: 1.4203; avg_articleRankScore: 0.2841; pageRankScore: 2.2770; avg_pageRankScore: 0.4554
+
+
+
+11
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ tpm(?individualC) ^ redefinedProperty(?individualC, ?individualD) ^ mop(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Satisfy] Unnamed -> [tpm|ValueProperty|uml:Property] mass -> [mop|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft
+articleRankScore: 2.7851; avg_articleRankScore: 0.5570; pageRankScore: 6.3207; avg_pageRankScore: 1.2641
+
+
+
+12
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ tpm(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)
+1 0.0094
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Satisfy] Unnamed -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical
+articleRankScore: 1.4790; avg_articleRankScore: 0.3697; pageRankScore: 3.1527; avg_pageRankScore: 0.7882
+
+
+
+13
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ mop(?individualC) ^ redefinedProperty(?individualD, ?individualC) ^ tpm(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [mop|ValueProperty|uml:Property] mass -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical
+articleRankScore: 1.7877; avg_articleRankScore: 0.3575; pageRankScore: 3.8231; avg_pageRankScore: 0.7646
+
+
+
+14
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ mop(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)
+1 0.0094
+[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [mop|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft
+articleRankScore: 2.4810; avg_articleRankScore: 0.6203; pageRankScore: 5.7257; avg_pageRankScore: 1.4314
+
+
+
+15
+Requirement(?individualA) ^ DerivedFrom(?individualB, ?individualA) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ uml:Port(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Electrical Power -> [Requirement|uml:Class] Electrical Interface -> [uml:Abstraction|Refine] Unnamed -> [uml:Port] sensor data i/f -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.7244; avg_articleRankScore: 0.3449; pageRankScore: 3.7458; avg_pageRankScore: 0.7492
+
+
+
+16
+Requirement(?individualA) ^ DerivedFrom(?individualB, ?individualA) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Satisfy(?individualC) ^ client(?individualC, ?individualD) ^ uml:Operation(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+2 0.0189
+[Requirement|uml:Class] MTF -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 2.0203; avg_articleRankScore: 0.4041; pageRankScore: 4.4361; avg_pageRankScore: 0.8872
+[Requirement|uml:Class] MTF -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 2.0203; avg_articleRankScore: 0.4041; pageRankScore: 4.4361; avg_pageRankScore: 0.8872
+
+
+
+17
+Requirement(?individualA) ^ DerivedFrom(?individualB, ?individualA) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ uml:Operation(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] MTF -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 2.0203; avg_articleRankScore: 0.4041; pageRankScore: 4.4361; avg_pageRankScore: 0.8872
+
+
+
+18
+Requirement(?individualA) ^ nestedClassifier(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Satisfy(?individualC) ^ client(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+8 0.0755
+[Requirement|uml:Class] Quality Characteristics -> [Requirement|uml:Class] Reliability -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.0889; avg_articleRankScore: 0.2178; pageRankScore: 1.4615; avg_pageRankScore: 0.2923
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Power -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.0889; avg_articleRankScore: 0.2178; pageRankScore: 1.4615; avg_pageRankScore: 0.2923
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Size -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.0889; avg_articleRankScore: 0.2178; pageRankScore: 1.4615; avg_pageRankScore: 0.2923
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Mass -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.0889; avg_articleRankScore: 0.2178; pageRankScore: 1.4615; avg_pageRankScore: 0.2923
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] Data Rate -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] data rate -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.0349; avg_articleRankScore: 0.2070; pageRankScore: 1.3570; avg_pageRankScore: 0.2714
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] Field of View -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.0703; avg_articleRankScore: 0.2141; pageRankScore: 1.4236; avg_pageRankScore: 0.2847
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.3424; avg_articleRankScore: 0.2685; pageRankScore: 1.9336; avg_pageRankScore: 0.3867
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.3424; avg_articleRankScore: 0.2685; pageRankScore: 1.9336; avg_pageRankScore: 0.3867
+
+
+
+19
+Requirement(?individualA) ^ nestedClassifier(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+8 0.0755
+[Requirement|uml:Class] Quality Characteristics -> [Requirement|uml:Class] Reliability -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6112; avg_articleRankScore: 0.3222; pageRankScore: 3.3398; avg_pageRankScore: 0.6680
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Power -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.5946; avg_articleRankScore: 0.3189; pageRankScore: 3.2347; avg_pageRankScore: 0.6469
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Size -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.5850; avg_articleRankScore: 0.3170; pageRankScore: 3.1996; avg_pageRankScore: 0.6399
+[Requirement|uml:Class] Physical -> [Requirement|uml:Class] Mass -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.5946; avg_articleRankScore: 0.3189; pageRankScore: 3.2347; avg_pageRankScore: 0.6469
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] Data Rate -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] data rate -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.5309; avg_articleRankScore: 0.3062; pageRankScore: 3.0951; avg_pageRankScore: 0.6190
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6675; avg_articleRankScore: 0.3335; pageRankScore: 3.5598; avg_pageRankScore: 0.7120
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8384; avg_articleRankScore: 0.3677; pageRankScore: 3.6717; avg_pageRankScore: 0.7343
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8646; avg_articleRankScore: 0.3729; pageRankScore: 3.8119; avg_pageRankScore: 0.7624
+
+
+
+20
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+8 0.0755
+[Requirement|uml:Class] Reliability -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] lifetime -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6375; avg_articleRankScore: 0.3275; pageRankScore: 3.3961; avg_pageRankScore: 0.6792
+[Requirement|uml:Class] Mass -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] mass -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6209; avg_articleRankScore: 0.3242; pageRankScore: 3.2910; avg_pageRankScore: 0.6582
+[Requirement|uml:Class] Size -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] size -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6113; avg_articleRankScore: 0.3223; pageRankScore: 3.2560; avg_pageRankScore: 0.6512
+[Requirement|uml:Class] Power -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] power -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6209; avg_articleRankScore: 0.3242; pageRankScore: 3.2910; avg_pageRankScore: 0.6582
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8909; avg_articleRankScore: 0.3782; pageRankScore: 3.8682; avg_pageRankScore: 0.7736
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] resolution -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8647; avg_articleRankScore: 0.3729; pageRankScore: 3.7281; avg_pageRankScore: 0.7456
+[Requirement|uml:Class] Field of View -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6938; avg_articleRankScore: 0.3388; pageRankScore: 3.6161; avg_pageRankScore: 0.7232
+[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] data rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.5572; avg_articleRankScore: 0.3114; pageRankScore: 3.1515; avg_pageRankScore: 0.6303
+
+
+
+21
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ hardware(?individualD) -> relation(?individualA, ?individualD)
+8 0.0755
+[Requirement|uml:Class] Reliability -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 0.9140; avg_articleRankScore: 0.2285; pageRankScore: 1.2704; avg_pageRankScore: 0.3176
+[Requirement|uml:Class] Mass -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 0.9140; avg_articleRankScore: 0.2285; pageRankScore: 1.2704; avg_pageRankScore: 0.3176
+[Requirement|uml:Class] Size -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 0.9140; avg_articleRankScore: 0.2285; pageRankScore: 1.2704; avg_pageRankScore: 0.3176
+[Requirement|uml:Class] Power -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 0.9140; avg_articleRankScore: 0.2285; pageRankScore: 1.2704; avg_pageRankScore: 0.3176
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.1675; avg_articleRankScore: 0.2919; pageRankScore: 1.7425; avg_pageRankScore: 0.4356
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.1675; avg_articleRankScore: 0.2919; pageRankScore: 1.7425; avg_pageRankScore: 0.4356
+[Requirement|uml:Class] Field of View -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 0.8954; avg_articleRankScore: 0.2238; pageRankScore: 1.2325; avg_pageRankScore: 0.3081
+[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] data rate -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 0.8600; avg_articleRankScore: 0.2150; pageRankScore: 1.1659; avg_pageRankScore: 0.2915
+
+
+
+22
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+8 0.0755
+[Requirement|uml:Class] Reliability -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] lifetime -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2427; avg_articleRankScore: 0.2485; pageRankScore: 1.8667; avg_pageRankScore: 0.3733
+[Requirement|uml:Class] Mass -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] mass -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2261; avg_articleRankScore: 0.2452; pageRankScore: 1.7616; avg_pageRankScore: 0.3523
+[Requirement|uml:Class] Size -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] size -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2165; avg_articleRankScore: 0.2433; pageRankScore: 1.7265; avg_pageRankScore: 0.3453
+[Requirement|uml:Class] Power -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] power -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2261; avg_articleRankScore: 0.2452; pageRankScore: 1.7616; avg_pageRankScore: 0.3523
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] resolution -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.4699; avg_articleRankScore: 0.2940; pageRankScore: 2.1986; avg_pageRankScore: 0.4397
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.4961; avg_articleRankScore: 0.2992; pageRankScore: 2.3388; avg_pageRankScore: 0.4678
+[Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.2989; avg_articleRankScore: 0.2598; pageRankScore: 2.0867; avg_pageRankScore: 0.4173
+[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] data rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|hardware|Block] Mid-Range IR Scanner
+articleRankScore: 1.1624; avg_articleRankScore: 0.2325; pageRankScore: 1.6220; avg_pageRankScore: 0.3244
+
+
+
+23
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ hardware(?individualD) -> relation(?individualA, ?individualD)
+8 0.0755
+[Requirement|uml:Class] Reliability -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.4363; avg_articleRankScore: 0.3591; pageRankScore: 3.1488; avg_pageRankScore: 0.7872
+[Requirement|uml:Class] Mass -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.4197; avg_articleRankScore: 0.3549; pageRankScore: 3.0436; avg_pageRankScore: 0.7609
+[Requirement|uml:Class] Size -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.4101; avg_articleRankScore: 0.3525; pageRankScore: 3.0086; avg_pageRankScore: 0.7521
+[Requirement|uml:Class] Power -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.4197; avg_articleRankScore: 0.3549; pageRankScore: 3.0436; avg_pageRankScore: 0.7609
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6635; avg_articleRankScore: 0.4159; pageRankScore: 3.4807; avg_pageRankScore: 0.8702
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6897; avg_articleRankScore: 0.4224; pageRankScore: 3.6209; avg_pageRankScore: 0.9052
+[Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.4926; avg_articleRankScore: 0.3731; pageRankScore: 3.3688; avg_pageRankScore: 0.8422
+[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] data rate -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.3560; avg_articleRankScore: 0.3390; pageRankScore: 2.9041; avg_pageRankScore: 0.7260
+
+
+
+24
+Requirement(?individualA) ^ DerivedFrom(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Satisfy(?individualC) ^ client(?individualC, ?individualD) ^ tpm(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Mass -> [Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Satisfy] Unnamed -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical
+articleRankScore: 1.7637; avg_articleRankScore: 0.3527; pageRankScore: 3.5509; avg_pageRankScore: 0.7102
+
+
+
+25
+Requirement(?individualA) ^ DerivedFrom(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ mop(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Mass -> [Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [mop|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft
+articleRankScore: 2.7658; avg_articleRankScore: 0.5532; pageRankScore: 6.1240; avg_pageRankScore: 1.2248
+
+
+
+26
+Requirement(?individualA) ^ nestedClassifier(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Satisfy(?individualC) ^ client(?individualC, ?individualD) ^ uml:Operation(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+2 0.0189
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8002; avg_articleRankScore: 0.3600; pageRankScore: 3.5947; avg_pageRankScore: 0.7189
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8002; avg_articleRankScore: 0.3600; pageRankScore: 3.5947; avg_pageRankScore: 0.7189
+
+
+
+27
+Requirement(?individualA) ^ nestedClassifier(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ uml:Operation(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Functional and Performance -> [Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8002; avg_articleRankScore: 0.3600; pageRankScore: 3.5947; avg_pageRankScore: 0.7189
+
+
+
+28
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ uml:Operation(?individualC) ^ ownedOperation(?individualD, ?individualC) ^ hardware(?individualD) -> relation(?individualA, ?individualD)
+2 0.0189
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6253; avg_articleRankScore: 0.4063; pageRankScore: 3.4037; avg_pageRankScore: 0.8509
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6253; avg_articleRankScore: 0.4063; pageRankScore: 3.4037; avg_pageRankScore: 0.8509
+
+
+
+29
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:State(?individualC) ^ constrainedElement(?individualD, ?individualC) ^ uml:Constraint(?individualD) ^ constrainedElement(?individualD, ?individualE) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Constraint] power -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8204; avg_articleRankScore: 0.3641; pageRankScore: 3.6403; avg_pageRankScore: 0.7281
+
+
+
+30
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:State(?individualC) ^ constrainedElement(?individualD, ?individualC) ^ uml:Constraint(?individualD) ^ ownedRule(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Constraint] power -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8204; avg_articleRankScore: 0.3641; pageRankScore: 3.6403; avg_pageRankScore: 0.7281
+
+
+
+31
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:Operation(?individualC) ^ ownedOperation(?individualD, ?individualC) ^ hardware(?individualD) -> relation(?individualA, ?individualD)
+1 0.0094
+[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.6253; avg_articleRankScore: 0.4063; pageRankScore: 3.4037; avg_pageRankScore: 0.8509
+
+
+
+32
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.8961; avg_articleRankScore: 0.3792; pageRankScore: 4.2230; avg_pageRankScore: 0.8446
+
+
+
+33
+Requirement(?individualA) ^ nestedClassifier(?individualA, ?individualB) ^ Requirement(?individualB) ^ supplier(?individualC, ?individualB) ^ Refine(?individualC) ^ client(?individualC, ?individualD) ^ uml:Port(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ hardware(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Interface -> [Requirement|uml:Class] Electrical Interface -> [uml:Abstraction|Refine] Unnamed -> [uml:Port] sensor data i/f -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.4892; avg_articleRankScore: 0.2978; pageRankScore: 3.0068; avg_pageRankScore: 0.6014
+
+
+
+34
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:Port(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ hardware(?individualD) -> relation(?individualA, ?individualD)
+1 0.0094
+[Requirement|uml:Class] Electrical Interface -> [uml:Abstraction|Refine] Unnamed -> [uml:Port] sensor data i/f -> [uml:Class|hardware|Block] Camera
+articleRankScore: 1.3143; avg_articleRankScore: 0.3286; pageRankScore: 2.8158; avg_pageRankScore: 0.7039
+
+
+
+35
+Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:Port(?individualC) ^ informationSource(?individualD, ?individualC) ^ uml:InformationFlow(?individualD) ^ conveyed(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)
+1 0.0094
+[Requirement|uml:Class] Electrical Interface -> [uml:Abstraction|Refine] Unnamed -> [uml:Port] sensor data i/f -> [uml:InformationFlow] flow for Payload Sensor Data -> [uml:Class|Block] Payload Sensor Data
+articleRankScore: 1.4539; avg_articleRankScore: 0.2908; pageRankScore: 2.7784; avg_pageRankScore: 0.5557
+
+
+
