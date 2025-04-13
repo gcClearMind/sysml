@@ -38,22 +38,35 @@
 
   <button onclick="applyFilters()">应用筛选</button>
   <button onclick="fetchGraph()">重置图谱</button>
-  <button onclick="window.location.href='inference.html'">路径推理</button>
+  <button onclick="openInferenceModal()">路径推理</button>
   <button onclick="openImportModal()">导入模型</button>
 </div>
 
 <!-- 路径推理弹窗 -->
 <div id="inferenceModal" class="modal">
   <h3>路径推理</h3>
-  <label for="startLabel">起始节点标签：</label>
-  <select id="startLabel"></select>
-  <label for="endLabel">结束节点标签：</label>
-  <select id="endLabel"></select>
-  <div class="button-group">
-    <button onclick="submitInference()">确认推理</button>
-    <button onclick="closeInferenceModal()">取消</button>
-  </div>
+  <ul  style="list-style-type: none;padding-left: 0;">
+    <li><label for="startLabel">选择起始标签：</label><select id="startLabel"></select></li>
+    <li><label for="endLabel">选择目标标签：</label><select id="endLabel"></select></li>
+    <li><button onclick="submitInference()">获取规则</button><button onclick="closeInferenceModal()">取消</button></li>
+  </ul>
 </div>
+
+
+<!-- 路径描述弹窗 -->
+<div id="pathModal" class="modal">
+  <h3>推理路径描述</h3>
+  <div id="pathDescription"></div>
+  <div id="paginationControls" class="pagination-controls">
+    <button id="prevPageBtn" onclick="changePage(-1)">上一页</button>
+    <span id="pageIndicator">第 1 页</span>
+    <button id="nextPageBtn" onclick="changePage(1)">下一页</button>
+  </div>
+  <button onclick="closePathModal()">关闭</button>
+</div>
+
+
+<!-- 用于背景遮罩的容器 -->
 
 <div id="ruleSelector" class="panel">
   <h3>推理结果（请选择规则）</h3>
@@ -84,13 +97,12 @@
   </div>
 </div>
 
-</div>
 
 <div class="graph-container" id="graph-container">
   <svg></svg>
   <div class="info-panel" id="info-panel"></div>
 </div>
-
+<div id="modalBackground" class="modal-background"></div>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="script.js"></script>
 

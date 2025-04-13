@@ -63,7 +63,7 @@ query_tp2 = \
         f"""
             MATCH (n1)-[r]->(n2)
             WHERE id(n1) IN {nodes_ids} AND id(n2) IN {nodes_ids} AND (not type(r)  IN ['packagedElement', 
-            'packageImport', 'importedPackage', 'client','supplier'])
+            'packageImport', 'importedPackage'])
              RETURN n1, type(r) AS relationship, n2
         """
 result_node2 = graph.run(query_tp2)

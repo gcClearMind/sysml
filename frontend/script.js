@@ -354,15 +354,21 @@ async function applyFilters() {
     console.error("筛选请求失败", error);
   }
 }
+// 打开路径推理弹窗
 function openInferenceModal() {
   document.getElementById('inferenceModal').style.display = 'block';
-  loadLabelsForInference();
+  document.getElementById('modalBackground').style.display = 'block';
+  loadLabelsForInference(); // 加载标签选项
 }
 
+// 关闭路径推理弹窗
 function closeInferenceModal() {
   document.getElementById('inferenceModal').style.display = 'none';
+  document.getElementById('modalBackground').style.display = 'none';
 }
 
+// 获取起始和目标标签后的推理路径
+// 获取推理路径
 async function submitInference() {
   const startLabel = document.getElementById('startLabel').value;
   const endLabel = document.getElementById('endLabel').value;
@@ -376,29 +382,93 @@ async function submitInference() {
 
     const data = await res.json();
 
-    // 显示规则和置信度
-    alert(`推理SWRL规则: \n${data.swrl_rule}\n\n置信度: ${data.confidence}`);
+    // 显示路径描述弹窗
+    showPathDescription(data.pathDescriptions);
 
-    drawGraph(data.path_nodes, data.path_links);
-
-    // ✅ 展示推理结果模块
-    showRelationCreator(data);
-
-    // ✅ 隐藏推理弹窗
+    // 关闭推理弹窗
     closeInferenceModal();
-
   } catch (error) {
     console.error("推理请求失败", error);
   }
 }
 
-function showRelationCreator(data) {
-  document.getElementById('ruleSelector').style.display = 'block';
-  document.getElementById('relationCreator').style.display = 'block';
-  document.getElementById('currentSwrlRule').innerText = data.swrl_rule || '未提供';
+let currentPage = 1;
+let itemsPerPage = 5; // 每页显示的路径数量
+let totalPages = 1; // 总页数
+let descriptions = []; // 用于存储推理路径描述的全局变量
+// 显示路径描述的弹窗
+function showPathDescription(descriptionsData) {
+  const pathModal = document.getElementById('pathModal');
+  const pathDescription = document.getElementById('pathDescription');
+  const paginationControls = document.getElementById('paginationControls');
+  const pageIndicator = document.getElementById('pageIndicator');
+    // 更新 descriptions
+  descriptions = descriptionsData;
+  // 清空现有内容
+  pathDescription.innerHTML = '';
+// 计算总页数
+  totalPages = Math.ceil(descriptions.length / itemsPerPage);
+
+  console.log(totalPages, itemsPerPage)
+  // 显示当前页的路径描述
+  const startIdx = (currentPage - 1) * itemsPerPage;
+  const endIdx = Math.min(currentPage * itemsPerPage, descriptions.length);
+  const currentPageData = descriptions.slice(startIdx, endIdx);
+
+  currentPageData .forEach(desc => {
+    const ruleColumn = document.createElement('div');
+    ruleColumn.classList.add('rule-column');
+
+    const pathColumn = document.createElement('div');
+    pathColumn.classList.add('path-column');
+
+    // 规则列
+    const ruleTitle = document.createElement('strong');
+    ruleTitle.innerHTML = `规则: ${desc.rule}`;
+    ruleColumn.appendChild(ruleTitle);
+
+    // 路径列
+    desc.paths.forEach(path => {
+      const pathText = document.createElement('p');
+      pathText.innerHTML = path;
+      pathColumn.appendChild(pathText);
+    });
+    // 添加分隔线
+    const separator = document.createElement('hr');
+    pathColumn.appendChild(separator);
+
+    // 将规则列和路径列放入弹窗
+    pathDescription.appendChild(ruleColumn);
+    pathDescription.appendChild(pathColumn);
+  });
+
+    // 更新分页信息
+  pageIndicator.innerHTML = `第 ${currentPage} 页`;
+  // 控制分页按钮的启用/禁用
+  document.getElementById('prevPageBtn').disabled = currentPage === 1;
+  document.getElementById('nextPageBtn').disabled = currentPage === totalPages;
+
+  pathModal.style.display = 'block';
+  document.getElementById('modalBackground').style.display = 'block';
 }
+function changePage(direction) {
+  const newPage = currentPage + direction;
+
+  // 确保页码在合法范围内
+  if (newPage >= 1 && newPage <= totalPages) {
+    currentPage = newPage;
+    showPathDescription(descriptions); // 重新加载当前页的路径描述
+  }
+}
+// 关闭路径描述弹窗
+function closePathModal() {
+  document.getElementById('pathModal').style.display = 'none';
+  document.getElementById('modalBackground').style.display = 'none';
+}
+
+
+// 加载标签列表到下拉框
 function loadLabelsForInference() {
-  // 获取标签列表，动态加载到下拉框
   fetch('http://localhost:11003/labels')
     .then(res => res.json())
     .then(data => {
@@ -420,6 +490,7 @@ function loadLabelsForInference() {
       });
     });
 }
+
 function openImportModal() {
   document.getElementById('importModal').style.display = 'block';
 }
@@ -464,68 +535,5 @@ document.getElementById('importForm').addEventListener('submit', function (e) {
 });
 
 // Fetching available SWRL rules from the backend
-function fetchRules() {
-  const startLabel = document.getElementById('startLabel').value;
-  const endLabel = document.getElementById('endLabel').value;
 
-  fetch(`http://localhost:11003/get_swr_rules?start=${startLabel}&end=${endLabel}`)
-    .then(response => response.json())
-    .then(data => {
-      const ruleSection = document.getElementById('ruleSection');
-      const swrRuleSelect = document.getElementById('swrRuleSelect');
 
-      // Clear existing options
-      swrRuleSelect.innerHTML = '';
-
-      // Add rules to the select dropdown
-      for (const rule in data) {
-        const option = document.createElement('option');
-        option.value = rule;
-        option.textContent = rule;
-        swrRuleSelect.appendChild(option);
-      }
-
-      // Show the rule section after fetching
-      ruleSection.style.display = 'block';
-    })
-    .catch(err => console.error('Error fetching rules:', err));
-}
-
-// Submit the selected rule and header for inference
-function submitInference() {
-  const selectedRule = document.getElementById('swrRuleSelect').value;
-  const ruleHeader = document.getElementById('ruleHeader').value;
-
-  fetch('http://localhost:11003/execute_inference', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      rule: selectedRule,
-      header: ruleHeader
-    })
-  })
-    .then(response => response.json())
-    .then(data => {
-      displayInferenceResult(data);
-    })
-    .catch(err => console.error('Error submitting inference:', err));
-}
-
-// Display inference results (new paths)
-function displayInferenceResult(data) {
-  const inferenceResult = document.getElementById('inferenceResult');
-  const pathList = document.getElementById('pathList');
-
-  // Clear previous results
-  pathList.innerHTML = '';
-
-  // Display new paths
-  data.paths.forEach(path => {
-    const listItem = document.createElement('li');
-    listItem.textContent = path;
-    pathList.appendChild(listItem);
-  });
-
-  // Show inference result section
-  inferenceResult.style.display = 'block';
-}

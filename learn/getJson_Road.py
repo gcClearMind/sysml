@@ -1,7 +1,9 @@
+import json
 from py2neo import Graph
 from collections import defaultdict
 import configparser
 import os
+import re
 
 
 def getSWRL(path):
@@ -67,11 +69,6 @@ def show_path(path):
         path_repr.append(node_str)
 
     return " -> ".join(path_repr)
-
-
-
-import re
-from py2neo import Graph
 
 
 def parse_swrl_rule(rule):
@@ -205,7 +202,7 @@ def main():
     # === 连接 Neo4j ===
     graph = Graph(uri, auth=(user, password))
 
-    file_path = "data/path/output_pca.txt"
+    file_path = "data/path/output_pca.json"  # 改为 JSON 格式文件路径
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
     start_label = "Requirement"
@@ -231,43 +228,44 @@ def main():
     id_counter = 0
     sum_paths = 0
 
+    output_data = []  # 用于存储 JSON 格式的输出数据
+
+    for record in results:
+        path = record['path']
+        swrl = getSWRL(path)
+        sum_paths += 1
+
+        if swrl in SWRL_list:
+            swrl_map[swrl].append(path)
+        else:
+            SWRL_list.add(swrl)
+            swrl_map[swrl].append(path)
+
+    # 将数据转化为 JSON 格式
+    for key, paths in swrl_map.items():
+        id_counter += 1
+        rule_data = {
+            'id': id_counter,
+            'rule': key,
+            'count': len(paths),
+            'paths': []  # 存储路径表示的列表
+        }
+
+        for path in paths:
+            path_data = {
+                'path_representation': show_path(path)
+            }
+            rule_data['paths'].append(path_data)
+
+        output_data.append(rule_data)
+
+    # 将数据写入 JSON 文件
     with open(file_path, 'w', encoding='utf-8') as writer:
-        for record in results:
-            path = record['path']
-            swrl = getSWRL(path)
-            sum_paths += 1
-
-            if swrl in SWRL_list:
-                swrl_map[swrl].append(path)
-            else:
-                SWRL_list.add(swrl)
-                swrl_map[swrl].append(path)
-
-        # === 写出文件，包括 PCA 置信度 ===
-        for key, paths in swrl_map.items():
-            id_counter += 1
-            writer.write(f"{id_counter}\n")
-            writer.write(f"{key}\n")
-            ratio = len(paths) / sum_paths if sum_paths > 0 else 0.0
-            writer.write(f"{len(paths)} {ratio:.4f}\n")
-
-
-            for path in paths:
-                length = 0
-
-                for node in path.nodes:
-                    props = dict(node)
-                    length += 1
-
-                writer.write(f"{show_path(path)}\n")
-
-
-            writer.write("\n\n\n")
+        json.dump(output_data, writer, ensure_ascii=False, indent=4)
 
     print(f"写入完成，共处理路径数：{sum_paths}")
     for key in swrl_map.keys():
         generalize_rule_and_check_with_counts(graph, key)
-
 
 if __name__ == "__main__":
     main()

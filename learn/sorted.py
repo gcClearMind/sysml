@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 文件路径（替换成你的文件路径）
-input_file = 'rules-10'
+input_file = 'rules-100'
 output_file = 'sorted_rules.txt'
 
 # 读取制表符分隔的文件

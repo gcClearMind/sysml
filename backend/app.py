@@ -9,6 +9,9 @@ from py2neo import Neo4jError, Graph
 from backend.add import ClearGraph
 from infer import run_inference  # 你可以自定义这个推理脚本
 from main6 import create_graph
+from flask import Flask, request, jsonify
+from py2neo import Graph
+from collections import defaultdict
 
 app = Flask(__name__)
 CORS(app)
@@ -70,10 +73,104 @@ def get_graph():
     return jsonify(result)
 
 
-@app.route('/infer', methods=['POST'])
-def infer():
-    inferred_paths = run_inference()  # 自定义推理逻辑
-    return jsonify({"inferred_paths": inferred_paths})
+@app.route('/infer_path', methods=['POST'])
+def infer_path():
+    start_label = request.json.get('startLabel')
+    end_label = request.json.get('endLabel')
+
+    # 查询图谱中的路径
+    query = f"""
+    MATCH path = (n:{start_label})-[r*2..4]-(m:{end_label})
+    WHERE ALL(rel IN r WHERE NOT type(rel) IN ['packagedElement', 'packageImport', 'importedPackage'])
+    RETURN path
+    """
+    results = graph.run(query)
+
+    swrl_list = set()
+    swrl_map = defaultdict(list)
+
+    for record in results:
+        path = record['path']
+        swrl = getSWRL(path)  # 使用getSWRL函数生成规则
+        if swrl in swrl_list:
+            swrl_map[swrl].append(path)
+        else:
+            swrl_list.add(swrl)
+            swrl_map[swrl].append(path)
+
+    path_descriptions = []
+    for key, paths in swrl_map.items():
+        description = {
+            'rule': key,
+            'paths': [show_path(path) for path in paths]  # 使用show_path函数返回路径描述
+        }
+        path_descriptions.append(description)
+
+    return jsonify({'pathDescriptions': path_descriptions})
+
+# 获取路径推理规则（如果需要）
+def getSWRL(path):
+    nodes = path.nodes
+    relationships = path.relationships
+
+    res = []
+    cur = None
+    now = None
+    start = None
+    end = None
+
+    for i, node in enumerate(nodes):
+        node_props = dict(node)
+        labels = list(node.labels)
+        xmiType = node_props.get('xmi:type')
+
+        now = f"individual{chr(ord('A') + i)}"
+
+        label = None
+        if len(labels) == 1:
+            label = labels[0]
+        else:
+            for s in labels:
+                if s != xmiType:
+                    label = s
+                    break
+
+        if not label and labels:
+            label = labels[0]
+
+        if i == 0:
+            start = now
+            res.append(f"{label}(?{now})")
+        else:
+            rel = relationships[i - 1]
+            rel_type = rel.__class__.__name__
+            end_id = rel.end_node.identity
+
+            if end_id == node.identity:
+                res.append(f"{rel_type}(?{cur}, ?{now})")
+            else:
+                res.append(f"{rel_type}(?{now}, ?{cur})")
+
+            res.append(f"{label}(?{now})")
+
+            if i == len(nodes) - 1:
+                end = now
+
+        cur = now
+
+    rule = " ^ ".join(res) + f" -> relation(?{start}, ?{end})"
+    return rule
+
+def show_path(path):
+    path_repr = []
+    for node in path.nodes:
+        labels = list(node.labels)
+        props = dict(node)
+        node_name = props.get('name', 'Unnamed')
+        node_str = f"[{'|'.join(labels)}] {node_name}"
+        path_repr.append(node_str)
+
+    return " -> ".join(path_repr)
 
 def run_neo4j_query(cypher_query, params=None):
     if params is None:

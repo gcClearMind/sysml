@@ -1,0 +1,1498 @@
+[
+    {
+        "id": 1,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ group(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ group(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ group(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ test_component(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Scale"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Display"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Optical Bench"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ partition(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ partition(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ partition(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ test_component(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Scale"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Display"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Optical Bench"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ specification(?individualB, ?individualC) ^ TestCase(?individualC) ^ ownedOperation(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 3,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:Operation|TestCase] verify mass -> [uml:Class|Block] Verification Context-Mass Properties"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Sensitivity -> [uml:Operation|TestCase] verify sensor sensitivity -> [uml:Class|Block] Verification Context-Sensor Performance"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:Operation|TestCase] verify sensor resolution -> [uml:Class|Block] Verification Context-Sensor Performance"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ method(?individualC, ?individualB) ^ TestCase(?individualC) ^ ownedOperation(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 3,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Activity|TestCase] Verify Mass -> [uml:Operation|TestCase] verify mass -> [uml:Class|Block] Verification Context-Mass Properties"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Sensitivity -> [uml:Operation|TestCase] verify sensor sensitivity -> [uml:Class|Block] Verification Context-Sensor Performance"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:Operation|TestCase] verify sensor resolution -> [uml:Class|Block] Verification Context-Sensor Performance"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ tpm(?individualB) ^ role(?individualC, ?individualB) ^ NestedConnectorEnd(?individualC) ^ end(?individualD, ?individualC) ^ BindingConnector(?individualD) ^ ownedConnector(?individualE, ?individualD) ^ analysis(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [tpm|ValueProperty|uml:Property] mass -> [uml:ConnectorEnd|NestedConnectorEnd] Unnamed -> [uml:Connector|BindingConnector] Unnamed -> [analysis|uml:Class|Block] Analysis Context"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ tpm(?individualB) ^ redefinedProperty(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ allocate(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [tpm|ValueProperty|uml:Property] mass -> [ValueProperty|mop|uml:Property] mass -> [ValueProperty|moe|uml:Property] Sat Mass卫星重量 -> [uml:Class|Block] Mission Enterprise"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ tpm(?individualB) ^ redefinedProperty(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ allocate(?individualC, ?individualD) ^ tpm(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [tpm|ValueProperty|uml:Property] mass -> [ValueProperty|mop|uml:Property] mass -> [tpm|ValueProperty|uml:Property] Payload_mass -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ tpm(?individualB) ^ redefinedProperty(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [tpm|ValueProperty|uml:Property] mass -> [ValueProperty|mop|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ tpm(?individualB) ^ ownedAttribute(?individualC, ?individualB) ^ system_of_interest(?individualC) -> relation(?individualA, ?individualC)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ allocate(?individualC, ?individualB) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [ValueProperty|mop|uml:Property] mass -> [ValueProperty|moe|uml:Property] Sat Mass卫星重量 -> [uml:Class|Block] Mission Enterprise"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ allocate(?individualB, ?individualC) ^ tpm(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ subsystem(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [ValueProperty|mop|uml:Property] mass -> [tpm|ValueProperty|uml:Property] Payload_mass -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ supplier(?individualC, ?individualB) ^ Allocate(?individualC) ^ client(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [ValueProperty|mop|uml:Property] mass -> [Allocate|uml:Abstraction] Unnamed -> [ValueProperty|moe|uml:Property] Sat Mass卫星重量 -> [uml:Class|Block] Mission Enterprise"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ redefinedProperty(?individualC, ?individualB) ^ tpm(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [ValueProperty|mop|uml:Property] mass -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ client(?individualC, ?individualB) ^ Allocate(?individualC) ^ supplier(?individualC, ?individualD) ^ tpm(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [ValueProperty|mop|uml:Property] mass -> [Allocate|uml:Abstraction] Unnamed -> [tpm|ValueProperty|uml:Property] Payload_mass -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ ownedAttribute(?individualC, ?individualB) ^ system_of_interest(?individualC) -> relation(?individualA, ?individualC)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [ValueProperty|mop|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ group(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ group(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ group(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ test_component(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Scale"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Display"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Optical Bench"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ partition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ partition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ partition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ test_component(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Scale"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Display"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Optical Bench"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ specification(?individualC, ?individualD) ^ TestCase(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 3,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:Operation|TestCase] verify mass -> [uml:Class|Block] Verification Context-Mass Properties"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Sensitivity -> [uml:Operation|TestCase] verify sensor sensitivity -> [uml:Class|Block] Verification Context-Sensor Performance"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:Operation|TestCase] verify sensor resolution -> [uml:Class|Block] Verification Context-Sensor Performance"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Verify(?individualB) ^ client(?individualB, ?individualC) ^ TestCase(?individualC) ^ method(?individualD, ?individualC) ^ TestCase(?individualD) ^ ownedOperation(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 3,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Mass -> [uml:Operation|TestCase] verify mass -> [uml:Class|Block] Verification Context-Mass Properties"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Sensitivity -> [uml:Operation|TestCase] verify sensor sensitivity -> [uml:Class|Block] Verification Context-Sensor Performance"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Verify] Unnamed -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:Operation|TestCase] verify sensor resolution -> [uml:Class|Block] Verification Context-Sensor Performance"
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ tpm(?individualC) ^ redefinedProperty(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Satisfy] Unnamed -> [tpm|ValueProperty|uml:Property] mass -> [ValueProperty|mop|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ tpm(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Satisfy] Unnamed -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ allocate(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|mop|uml:Property] mass -> [ValueProperty|moe|uml:Property] Sat Mass卫星重量 -> [uml:Class|Block] Mission Enterprise"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ allocate(?individualC, ?individualD) ^ tpm(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|mop|uml:Property] mass -> [tpm|ValueProperty|uml:Property] Payload_mass -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualD, ?individualC) ^ tpm(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|mop|uml:Property] mass -> [tpm|ValueProperty|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Mass 卫星 -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|mop|uml:Property] mass -> [system_of_interest|uml:Class|Block] Spacecraft"
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ redefinedProperty(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [ValueProperty|uml:Property] lifetime -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [ValueProperty|uml:Property] mass -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [ValueProperty|uml:Property] power -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] sensitivity -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ ownedAttribute(?individualC, ?individualB) ^ Block(?individualC) -> relation(?individualA, ?individualC)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ definingFeature(?individualC, ?individualB) ^ uml:Slot(?individualC) ^ slot(?individualD, ?individualC) ^ uml:InstanceSpecification(?individualD) ^ classifier(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 16,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [ValueProperty|uml:Property] lifetime -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [ValueProperty|uml:Property] lifetime -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [ValueProperty|uml:Property] mass -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [ValueProperty|uml:Property] mass -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [ValueProperty|uml:Property] power -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [ValueProperty|uml:Property] power -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] sensitivity -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] sensitivity -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] analysis Context.icq analysis.camera Parameters Analysis.payload Subsystem.partProperty7 -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [uml:Slot] Unnamed -> [uml:InstanceSpecification] camera Parameters Analysis.payload Subsystem.partProperty -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ redefinedProperty(?individualC, ?individualB) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [ValueProperty|uml:Property] lifetime -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [ValueProperty|uml:Property] mass -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [ValueProperty|uml:Property] power -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] sensitivity -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ ownedAttribute(?individualC, ?individualB) ^ Block(?individualC) -> relation(?individualA, ?individualC)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] lifetime -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] mass -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] size -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] power -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] resolution -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] data rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Satisfy] Unnamed -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] lifetime -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] mass -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] size -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] power -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] resolution -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] data rate -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Reliability -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] lifetime -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Mass -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] mass -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Power -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] power -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] sensitivity -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ type(?individualB, ?individualC) ^ ValueType(?individualC) ^ type(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [ValueType|uml:DataType] Shape -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [ValueType|uml:DataType] mbps -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ type(?individualB, ?individualC) ^ ValueType(?individualC) ^ type(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 8,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Size -> [ValueProperty|uml:Property] size -> [ValueType|uml:DataType] Shape -> [ValueProperty|uml:Property] size -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [ValueProperty|uml:Property] resolution -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueType|uml:DataType] milliradian -> [ValueProperty|uml:Property] resolution -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [ValueType|uml:DataType] mbps -> [ValueProperty|uml:Property] data rate -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:InitialNode(?individualC) ^ inPartition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:InitialNode] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:InitialNode(?individualC) ^ node(?individualD, ?individualC) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:InitialNode] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:ActivityFinalNode(?individualC) ^ inPartition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityFinalNode] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:ActivityFinalNode(?individualC) ^ node(?individualD, ?individualC) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityFinalNode] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ inPartition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ behavior(?individualC, ?individualD) ^ uml:Activity(?individualD) ^ allocate(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 7,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Assess Pass/Fail -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Measure Resolution -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Control Unit-Under-Test -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Process Signal -> [uml:Class|Block|hardware] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Control Thermal Source -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Sense Thermal Emissions -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Sense Thermal Emissions -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ node(?individualD, ?individualC) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ argument(?individualC, ?individualD) ^ uml:InputPin(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Thermal Imagery"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Payload Sensor Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Observation Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Sensor CMD"
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ result(?individualC, ?individualD) ^ uml:OutputPin(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Sensor CMD"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Observation Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Thermal Imagery"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Payload Sensor Data"
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ inPartition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ test_component(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 3,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Display"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Optical Bench"
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ behavior(?individualC, ?individualD) ^ uml:Activity(?individualD) ^ allocate(?individualD, ?individualE) ^ test_component(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 3,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Process Signal -> [test_component|uml:Class|Block] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Display Imagery -> [test_component|uml:Class|Block] Display"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Generate Thermal Emission -> [test_component|uml:Class|Block] Optical Bench"
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ behavior(?individualC, ?individualD) ^ uml:Activity(?individualD) ^ allocate(?individualD, ?individualE) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Process Signal -> [subsystem|uml:Class|Block] Payload Subsystem"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Sense Thermal Emissions -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ node(?individualD, ?individualC) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ test_component(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 3,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Signal Processor"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Display"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [test_component|uml:Class|Block] Optical Bench"
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ node(?individualB, ?individualC) ^ uml:CallBehaviorAction(?individualC) ^ behavior(?individualC, ?individualD) ^ uml:Activity(?individualD) ^ allocate(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:CallBehaviorAction] Unnamed -> [uml:Activity] Sense Thermal Emissions -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ group(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ ReferenceProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [ReferenceProperty|uml:Property] system-under-test -> [uml:Class|Block] Verification Context-Sensor Performance"
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ group(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ ReferenceProperty(?individualD) ^ type(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [ReferenceProperty|uml:Property] system-under-test -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 61,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ edge(?individualB, ?individualC) ^ uml:ControlFlow(?individualC) ^ edge(?individualD, ?individualC) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ edge(?individualB, ?individualC) ^ uml:ControlFlow(?individualC) ^ inPartition(?individualC, ?individualD) ^ AllocateActivityPartition(?individualD) ^ represents(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ControlFlow] Unnamed -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [uml:Class|Block] Test Operator"
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ edge(?individualB, ?individualC) ^ uml:ObjectFlow(?individualC) ^ target(?individualC, ?individualD) ^ uml:InputPin(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Thermal Imagery"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Observation Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Payload Sensor Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:InputPin] Unnamed -> [uml:Class|Block] Sensor CMD"
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ edge(?individualB, ?individualC) ^ uml:ObjectFlow(?individualC) ^ source(?individualC, ?individualD) ^ uml:OutputPin(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 4,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Thermal Imagery"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Observation Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Payload Sensor Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ObjectFlow] Unnamed -> [uml:OutputPin] Unnamed -> [uml:Class|Block] Sensor CMD"
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ partition(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ ReferenceProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [ReferenceProperty|uml:Property] system-under-test -> [uml:Class|Block] Verification Context-Sensor Performance"
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "rule": "Requirement(?individualA) ^ verify(?individualB, ?individualA) ^ TestCase(?individualB) ^ partition(?individualB, ?individualC) ^ AllocateActivityPartition(?individualC) ^ represents(?individualC, ?individualD) ^ ReferenceProperty(?individualD) ^ type(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Activity|TestCase] Verify Sensor Resolution -> [uml:ActivityPartition|AllocateActivityPartition] Unnamed -> [ReferenceProperty|uml:Property] system-under-test -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ uml:Operation(?individualB) ^ ownedOperation(?individualC, ?individualB) ^ Block(?individualC) -> relation(?individualA, ?individualC)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Operation] sense thermal emissions -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ allocate(?individualC, ?individualD) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 69,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ allocate(?individualC, ?individualD) ^ subsystem(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ allocate(?individualC, ?individualD) ^ system_of_interest(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ client(?individualD, ?individualC) ^ Allocate(?individualD) ^ supplier(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [Allocate|uml:Abstraction] Unnamed -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [Allocate|uml:Abstraction] Unnamed -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 72,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ node(?individualC, ?individualD) ^ uml:ActivityParameterNode(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:ActivityParameterNode] Unnamed -> [uml:Class|Block] Payload Sensor Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:ActivityParameterNode] Unnamed -> [uml:Class|Block] Sensor CMD"
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ ownedParameter(?individualC, ?individualD) ^ uml:Parameter(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:Parameter] Unnamed -> [uml:Class|Block] Payload Sensor Data"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:Parameter] Unnamed -> [uml:Class|Block] Sensor CMD"
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ client(?individualD, ?individualC) ^ Allocate(?individualD) ^ supplier(?individualD, ?individualE) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [Allocate|uml:Abstraction] Unnamed -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 75,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ doActivity(?individualB, ?individualC) ^ uml:Activity(?individualC) ^ client(?individualD, ?individualC) ^ Allocate(?individualD) ^ supplier(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [Allocate|uml:Abstraction] Unnamed -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ subvertex(?individualC, ?individualB) ^ uml:Region(?individualC) ^ region(?individualD, ?individualC) ^ uml:StateMachine(?individualD) ^ ownedBehavior(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Region] Unnamed -> [uml:StateMachine] Payload Sensor States -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ subvertex(?individualC, ?individualB) ^ uml:Region(?individualC) ^ region(?individualD, ?individualC) ^ uml:StateMachine(?individualD) ^ classifierBehavior(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Region] Unnamed -> [uml:StateMachine] Payload Sensor States -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ constrainedElement(?individualC, ?individualB) ^ uml:Constraint(?individualC) ^ constrainedElement(?individualC, ?individualD) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Constraint] power -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:State(?individualB) ^ constrainedElement(?individualC, ?individualB) ^ uml:Constraint(?individualC) ^ ownedRule(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:State] on -> [uml:Constraint] power -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Operation(?individualB) ^ ownedOperation(?individualC, ?individualB) ^ Block(?individualC) -> relation(?individualA, ?individualC)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Operation] sense thermal emissions -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Satisfy(?individualB) ^ client(?individualB, ?individualC) ^ uml:Operation(?individualC) ^ ownedOperation(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|Block|hardware] Camera"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Satisfy] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 82,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:State(?individualC) ^ doActivity(?individualC, ?individualD) ^ uml:Activity(?individualD) ^ allocate(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 2,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            },
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:State(?individualC) ^ doActivity(?individualC, ?individualD) ^ uml:Activity(?individualD) ^ allocate(?individualD, ?individualE) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:State(?individualC) ^ doActivity(?individualC, ?individualD) ^ uml:Activity(?individualD) ^ allocate(?individualD, ?individualE) ^ system_of_interest(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Activity] Sense Thermal Emissions -> [system_of_interest|uml:Class|Block] Spacecraft-Physical"
+            }
+        ]
+    },
+    {
+        "id": 85,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:State(?individualC) ^ constrainedElement(?individualD, ?individualC) ^ uml:Constraint(?individualD) ^ constrainedElement(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Constraint] power -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:State(?individualC) ^ constrainedElement(?individualD, ?individualC) ^ uml:Constraint(?individualD) ^ ownedRule(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:State] on -> [uml:Constraint] power -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 87,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:Operation(?individualC) ^ ownedOperation(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] MTF -> [uml:Abstraction|Refine] Unnamed -> [uml:Operation] sense thermal emissions -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ redefinedProperty(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ redefinedProperty(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Mid-Range IR Scanner"
+            }
+        ]
+    },
+    {
+        "id": 90,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ redefinedProperty(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 91,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ ValueProperty(?individualC) ^ redefinedProperty(?individualC, ?individualD) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Field of View -> [uml:Abstraction|Refine] Unnamed -> [ValueProperty|uml:Property] field of view -> [ValueProperty|uml:Property] field of view -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "rule": "Requirement(?individualA) ^ satisfy(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ type(?individualB, ?individualC) ^ ValueType(?individualC) ^ type(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [ValueType|uml:DataType] mbps -> [ValueProperty|uml:Property] Data rate -> [subsystem|uml:Class|Block] DTS Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 93,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ ValueProperty(?individualB) ^ type(?individualB, ?individualC) ^ ValueType(?individualC) ^ type(?individualD, ?individualC) ^ ValueProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Data Rate -> [ValueProperty|uml:Property] data rate -> [ValueType|uml:DataType] mbps -> [ValueProperty|uml:Property] Data rate -> [subsystem|uml:Class|Block] DTS Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ ownedAttribute(?individualC, ?individualB) ^ Block(?individualC) -> relation(?individualA, ?individualC)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ informationSource(?individualC, ?individualB) ^ uml:InformationFlow(?individualC) ^ realizingConnector(?individualC, ?individualD) ^ uml:Connector(?individualD) ^ ownedConnector(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:InformationFlow] flow for Payload Sensor Data -> [uml:Connector] Unnamed -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ informationSource(?individualC, ?individualB) ^ uml:InformationFlow(?individualC) ^ informationTarget(?individualC, ?individualD) ^ uml:Port(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:InformationFlow] flow for Payload Sensor Data -> [uml:Port] sensor data if -> [uml:Class|Block|hardware] Signal Processor"
+            }
+        ]
+    },
+    {
+        "id": 97,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ informationSource(?individualC, ?individualB) ^ uml:InformationFlow(?individualC) ^ conveyed(?individualC, ?individualD) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:InformationFlow] flow for Payload Sensor Data -> [uml:Class|Block] Payload Sensor Data"
+            }
+        ]
+    },
+    {
+        "id": 98,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ role(?individualC, ?individualB) ^ NestedConnectorEnd(?individualC) ^ propertyPath(?individualC, ?individualD) ^ PartProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:ConnectorEnd|NestedConnectorEnd] Unnamed -> [uml:Property|PartProperty] Unnamed -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 99,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ role(?individualC, ?individualB) ^ NestedConnectorEnd(?individualC) ^ propertyPath(?individualC, ?individualD) ^ PartProperty(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:ConnectorEnd|NestedConnectorEnd] Unnamed -> [uml:Property|PartProperty] Unnamed -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ role(?individualC, ?individualB) ^ NestedConnectorEnd(?individualC) ^ end(?individualD, ?individualC) ^ uml:Connector(?individualD) ^ ownedConnector(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:ConnectorEnd|NestedConnectorEnd] Unnamed -> [uml:Connector] Unnamed -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ role(?individualC, ?individualB) ^ NestedConnectorEnd(?individualC) ^ partWithPort(?individualC, ?individualD) ^ PartProperty(?individualD) ^ ownedAttribute(?individualE, ?individualD) ^ subsystem(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:ConnectorEnd|NestedConnectorEnd] Unnamed -> [uml:Property|PartProperty] Unnamed -> [subsystem|uml:Class|Block] Payload Subsystem"
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "rule": "Requirement(?individualA) ^ refine(?individualB, ?individualA) ^ uml:Port(?individualB) ^ role(?individualC, ?individualB) ^ NestedConnectorEnd(?individualC) ^ partWithPort(?individualC, ?individualD) ^ PartProperty(?individualD) ^ type(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Port] sensor data i/f -> [uml:ConnectorEnd|NestedConnectorEnd] Unnamed -> [uml:Property|PartProperty] Unnamed -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 103,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:Port(?individualC) ^ ownedAttribute(?individualD, ?individualC) ^ Block(?individualD) -> relation(?individualA, ?individualD)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Abstraction|Refine] Unnamed -> [uml:Port] sensor data i/f -> [uml:Class|Block|hardware] Camera"
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "rule": "Requirement(?individualA) ^ supplier(?individualB, ?individualA) ^ Refine(?individualB) ^ client(?individualB, ?individualC) ^ uml:Port(?individualC) ^ informationSource(?individualD, ?individualC) ^ uml:InformationFlow(?individualD) ^ conveyed(?individualD, ?individualE) ^ Block(?individualE) -> relation(?individualA, ?individualE)",
+        "count": 1,
+        "paths": [
+            {
+                "path_representation": "[Requirement|uml:Class] Electrical Interface -> [uml:Abstraction|Refine] Unnamed -> [uml:Port] sensor data i/f -> [uml:InformationFlow] flow for Payload Sensor Data -> [uml:Class|Block] Payload Sensor Data"
+            }
+        ]
+    }
+]
