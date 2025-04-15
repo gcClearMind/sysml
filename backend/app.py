@@ -80,9 +80,10 @@ def infer_path():
 
     # 查询图谱中的路径
     query = f"""
-    MATCH path = (n:{start_label})-[r*2..4]-(m:{end_label})
-    WHERE ALL(rel IN r WHERE NOT type(rel) IN ['packagedElement', 'packageImport', 'importedPackage'])
-    RETURN path
+        MATCH path = (n:{start_label})-[r*2..3]-(m:{end_label})
+         WHERE ALL(rel IN r WHERE NOT type(rel) IN ['packagedElement', 'packageImport', 'importedPackage','client','supplier'])
+         AND NONE(node IN nodes(path)[1..-1] WHERE node:{start_label} OR node:{end_label})
+         RETURN path
     """
     results = graph.run(query)
 
@@ -107,6 +108,7 @@ def infer_path():
         path_descriptions.append(description)
 
     return jsonify({'pathDescriptions': path_descriptions})
+
 
 # 获取路径推理规则（如果需要）
 def getSWRL(path):
@@ -134,9 +136,6 @@ def getSWRL(path):
                 if s != xmiType:
                     label = s
                     break
-
-        if not label and labels:
-            label = labels[0]
 
         if i == 0:
             start = now

@@ -30,9 +30,6 @@ def getSWRL(path):
                     label = s
                     break
 
-        if not label and labels:
-            label = labels[0]
-
         if i == 0:
             start = now
             res.append(f"{label}(?{now})")
