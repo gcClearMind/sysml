@@ -335,3 +335,15 @@ hr {
   border-top: 1px solid #ccc; /* 灰色的分隔线 */
   margin: 10px 0;
 }
+
+#ruleDetailModal {
+  width: 700px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+#ruleDetailModal input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 14px;
+}

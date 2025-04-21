@@ -423,8 +423,11 @@ function showPathDescription(descriptionsData) {
     pathColumn.classList.add('path-column');
 
     // 规则列
-    const ruleTitle = document.createElement('strong');
-    ruleTitle.innerHTML = `规则: ${desc.rule}`;
+    const ruleTitle = document.createElement('a');
+    ruleTitle.href = "javascript:void(0);";
+    ruleTitle.style.color = "blue";
+    ruleTitle.innerText = `规则: ${desc.rule}`;
+    ruleTitle.onclick = () => openRuleDetail(desc);
     ruleColumn.appendChild(ruleTitle);
 
     // 路径列
@@ -537,3 +540,53 @@ document.getElementById('importForm').addEventListener('submit', function (e) {
 // Fetching available SWRL rules from the backend
 
 
+function openRuleDetail(desc) {
+  const modal = document.getElementById('ruleDetailModal');
+  const content = document.getElementById('ruleDetailContent');
+  const input = document.getElementById('relationInput');
+
+  // 解析规则末尾默认关系
+  const lastArrowIdx = desc.rule.lastIndexOf("->");
+  const ruleHead = desc.rule.substring(0, lastArrowIdx).trim();
+  const ruleTail = desc.rule.substring(lastArrowIdx + 2).trim(); // 例如 relation(?A, ?B)
+
+  input.value = ruleTail.split("(")[0]; // 默认填 relation
+
+  // 显示规则和路径
+  content.innerHTML = `
+    <p><strong>原始规则:</strong> ${desc.rule}</p>
+    <p><strong>匹配路径:</strong></p>
+    <div>${desc.paths.map(p => `<p>${p}</p>`).join("")}</div>
+  `;
+
+  // 保存当前规则体和变量名，用于构造新规则
+  modal.dataset.ruleHead = ruleHead;
+  modal.dataset.ruleTailArgs = ruleTail.substring(ruleTail.indexOf('(')); // 保留(?A, ?B)
+
+  modal.style.display = 'block';
+  document.getElementById('modalBackground').style.display = 'block';
+}
+
+function saveRelation() {
+  const modal = document.getElementById('ruleDetailModal');
+  const newRelation = document.getElementById('relationInput').value.trim();
+  const ruleHead = modal.dataset.ruleHead;
+  const ruleArgs = modal.dataset.ruleTailArgs;
+
+  if (!newRelation) {
+    alert("请输入新的关系名称！");
+    return;
+  }
+
+  const newRule = `${ruleHead} -> ${newRelation}${ruleArgs}`;
+  alert(`你定义的新规则为:\n${newRule}`);
+
+  // TODO：可添加将此规则提交给后端的逻辑
+
+  closeRuleDetailModal();
+}
+
+function closeRuleDetailModal() {
+  document.getElementById('ruleDetailModal').style.display = 'none';
+  document.getElementById('modalBackground').style.display = 'none';
+}
