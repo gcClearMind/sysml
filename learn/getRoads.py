@@ -207,7 +207,7 @@ def main():
 
     start_label = "Requirement"
     end_label = "Block"
-    path_len = 4
+    path_len = 6
 
     relation_type = "relation"  # 规则后件的目标关系名称
 

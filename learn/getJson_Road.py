@@ -202,25 +202,46 @@ def main():
     # === 连接 Neo4j ===
     graph = Graph(uri, auth=(user, password))
 
-    file_path = "data/path/output_pca.json"  # 改为 JSON 格式文件路径
+    file_path = "data/path/output_pca_3.json"  # 改为 JSON 格式文件路径
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
     start_label = "Requirement"
     end_label = "Block"
-    path_len = 4
+    path_len = 6
 
     relation_type = "relation"  # 规则后件的目标关系名称
 
     SWRL_list = set()
-    swrl_map = defaultdict(list)
+    swrl_map \
+        = defaultdict(list)
 
+    # query = (
+    #
+    #     f"MATCH path = (n:{start_label})-[r*2..{path_len}]-(m:{end_label})"
+    #     f" WHERE ALL(rel IN r WHERE NOT type(rel) IN ['packagedElement', 'packageImport', 'importedPackage']) "
+    #     f" AND NONE(node IN nodes(path)[1..-1] WHERE node:{start_label} OR node:{end_label})"
+    #     f" AND ALL(node IN nodes(path) WHERE size([n IN nodes(path) WHERE n = node]) = 1)"
+    #     f" RETURN path"
+    #
+    # )
     query = (
+        f"""
+        MATCH (r:{start_label}), (b:{end_label})
+WHERE r <> b
+MATCH path = shortestPath((r)-[*..{path_len}]-(b))
+WHERE
+  ALL(rel IN relationships(path)
+       WHERE NOT type(rel) IN ['packagedElement', 'packageImport', 'importedPackage']) AND
 
-        f"MATCH path = (n:{start_label})-[r*2..{path_len}]-(m:{end_label})"
-        f" WHERE ALL(rel IN r WHERE NOT type(rel) IN ['packagedElement', 'packageImport', 'importedPackage']) "
-        f" AND NONE(node IN nodes(path)[1..-1] WHERE node:Block OR node:Requirement)"
-        f" RETURN path"
+  NONE(node IN nodes(path)[1..-1]
+       WHERE node:{start_label} OR node:{end_label}) AND
 
+  ALL(node IN nodes(path)
+       WHERE size([n IN nodes(path) WHERE n = node]) = 1)
+
+RETURN r.name AS start, b.name AS end, length(path) AS path_length, path
+
+        """
     )
 
     results = graph.run(query)
@@ -266,6 +287,7 @@ def main():
     print(f"写入完成，共处理路径数：{sum_paths}")
     for key in swrl_map.keys():
         generalize_rule_and_check_with_counts(graph, key)
+
 
 if __name__ == "__main__":
     main()
