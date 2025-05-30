@@ -205,7 +205,7 @@ def main():
     file_path = "data/path/output_pca_3.json"  # 改为 JSON 格式文件路径
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-    start_label = "Requirement"
+    start_label = "uml:Activity"
     end_label = "Block"
     path_len = 6
 
@@ -226,7 +226,7 @@ def main():
     # )
     query = (
         f"""
-        MATCH (r:{start_label}), (b:{end_label})
+        MATCH (r:`{start_label}`), (b:`{end_label}`)
 WHERE r <> b
 MATCH path = shortestPath((r)-[*..{path_len}]-(b))
 WHERE
@@ -234,7 +234,7 @@ WHERE
        WHERE NOT type(rel) IN ['packagedElement', 'packageImport', 'importedPackage']) AND
 
   NONE(node IN nodes(path)[1..-1]
-       WHERE node:{start_label} OR node:{end_label}) AND
+       WHERE node:`{start_label}` OR node:`{end_label}`) AND
 
   ALL(node IN nodes(path)
        WHERE size([n IN nodes(path) WHERE n = node]) = 1)
@@ -245,7 +245,7 @@ RETURN r.name AS start, b.name AS end, length(path) AS path_length, path
     )
 
     results = graph.run(query)
-
+    print(query)
     id_counter = 0
     sum_paths = 0
 
